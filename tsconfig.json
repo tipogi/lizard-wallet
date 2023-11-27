@@ -1,0 +1,20 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/translations": ["src/constants/translations/index.ts"],
+      "@/navigation": ["src/constants/navigation.ts"],
+      "@/svg/*":["assets/images/svg/*"],
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts",
+    "config/custom.d.ts"
+  ]
+}
