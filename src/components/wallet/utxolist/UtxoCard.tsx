@@ -1,4 +1,4 @@
-import { Drop, Palette, Tag, Tail } from "@/components/global/svg";
+import { Drop, Grape, Palette, Tag, Tail } from "@/components/global/svg";
 import { StyleSheet, Text, View } from "react-native";
 
 export interface UtxoProps {
@@ -23,7 +23,7 @@ const UtxoCard = ({ id, address, tag, index, color, balance }: UtxoProps) => {
                 <View style={utxoCardStyle.infoContainer}>
                     <View style={utxoCardStyle.tagContainer}>
                         <View style={utxoCardStyle.tagIconContainer}>
-                            <Tag fontSize={12} color={"#FFBB38"}/>
+                            <Tag fontSize={17} color={"#909090"}/>
                         </View>
                         <Text style={utxoCardStyle.primaryColor}>{`${tag}`}</Text>
                     </View>
@@ -31,7 +31,8 @@ const UtxoCard = ({ id, address, tag, index, color, balance }: UtxoProps) => {
                 </View>
             </View>
             <View style={utxoCardStyle.colorContainer}>
-                <Drop fontSize={12} color={color}/>
+                {/* <Drop fontSize={12} color={color}/> */}
+                <Grape fontSize={15} color={color} />
             </View>
         </View>
     )
@@ -83,7 +84,7 @@ const utxoCardStyle = StyleSheet.create({
         display: 'flex',
         flex: 2,
         alignItems: 'center',
-        justifyContent: 'flex-end',
+        justifyContent: 'center',
         marginBottom: 2
     },
     balance: {
@@ -91,7 +92,7 @@ const utxoCardStyle = StyleSheet.create({
         fontWeight: "bold"
     },
     primaryColor: {
-        color: "#909090"
+        color: "#909090",
     }
 })
 

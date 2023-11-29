@@ -6,6 +6,7 @@ export default function WalletTransaction() {
     <View style={styles.container}>
       <Text>Wallet Transaction</Text>
       {/* <StatusBar style="auto" /> */}
+      
     </View>
   );
 }

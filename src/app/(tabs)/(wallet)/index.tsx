@@ -1,4 +1,4 @@
-import { WalletComponent } from '@/components/wallet/screens/main';
+import { WalletComponent } from '@/components/wallet/main';
 import React from 'react';
 
 const Wallet = () => {

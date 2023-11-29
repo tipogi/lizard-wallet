@@ -4,7 +4,7 @@ export const ROOT = '/'
 export const WALLET_SCREEN = "(wallet)"
 export const UTXO_SCREEN = "utxos"
 export const RECEIVE_SCREEN = "receive"
-export const TX_SCREEN = "transactions"
+export const TX_SCREEN = "transaction"
 
 export const SETTINGS_SCREEN = "settings"
 

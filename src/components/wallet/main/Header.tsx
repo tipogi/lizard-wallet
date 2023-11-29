@@ -3,7 +3,7 @@ import { BroadcastStream, Utxos, ShieldCheck } from '@/components/global/svg';
 import { Link, useRouter } from 'expo-router';
 import { NAVIGATION } from '@/constants/navigation';
 
-export const WalletHeader = () => {
+const WalletHeader = () => {
   return (
     <View style={styles.container}>
       <View style={styles.actionBar}>
@@ -68,3 +68,5 @@ const styles = StyleSheet.create({
     fontSize: 40
   }
 });
+
+export default WalletHeader;

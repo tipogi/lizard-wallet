@@ -2,14 +2,15 @@ import { Button, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
 import { Link } from 'expo-router';
 import { Colors } from '@/constants';
-import { WalletHeader } from './header';
+import TransactionList from './TransactionList';
+import WalletHeader from './Header';
 
 export const WalletComponent = () => {
     return (
         <View style={styles.container}>
             <WalletHeader/>
             <View style={styles.main}>
-                
+                <TransactionList />
             </View>
         </View>
     );
