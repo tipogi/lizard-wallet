@@ -8,6 +8,9 @@ export { ScanAddress } from './ScanAddress';
 export { Wallet } from './Wallet';
 export { Tag } from './Tag';
 export { Grape } from './Grape';
+export { In } from './In';
+export { Out } from './Out';
+export { Qr } from './qr';
 
 // Not in use
 export { Tail } from './Tail';

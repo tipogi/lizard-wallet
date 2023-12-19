@@ -1,4 +1,5 @@
 import { Drop, Grape, Palette, Tag, Tail } from "@/components/global/svg";
+import { addDotsToValue } from "@/data/convertions";
 import { StyleSheet, Text, View } from "react-native";
 
 export interface UtxoProps {
@@ -25,9 +26,9 @@ const UtxoCard = ({ id, address, tag, index, color, balance }: UtxoProps) => {
                         <View style={utxoCardStyle.tagIconContainer}>
                             <Tag fontSize={17} color={"#909090"}/>
                         </View>
-                        <Text style={utxoCardStyle.primaryColor}>{`${tag}`}</Text>
+                        <Text style={[utxoCardStyle.tagText, utxoCardStyle.primaryColor]}>{`${tag}`}</Text>
                     </View>
-                    <Text style={utxoCardStyle.balance}>{`${balance} sat`}</Text>
+                    <Text style={utxoCardStyle.balance}>{`${addDotsToValue(balance)} sat`}</Text>
                 </View>
             </View>
             <View style={utxoCardStyle.colorContainer}>
@@ -61,9 +62,9 @@ const utxoCardStyle = StyleSheet.create({
         alignItems: 'flex-start',
     },
     address: {
-        fontSize: 14,
+        fontSize: 26,
         color: "#909090",
-        fontWeight: "bold"
+        fontFamily: "karantina-regular",
     },
     infoContainer: {
         flexDirection: 'row',
@@ -77,6 +78,10 @@ const utxoCardStyle = StyleSheet.create({
         alignItems:'center',
         justifyContent: 'center'
     },
+    tagText: {
+        fontFamily: "karantina-light",
+        fontSize: 20
+    },
     tagIconContainer: {
         marginRight: 5
     },
@@ -89,7 +94,8 @@ const utxoCardStyle = StyleSheet.create({
     },
     balance: {
         color: "#FFBB38",
-        fontWeight: "bold"
+        fontFamily: "karantina-regular",
+        fontSize: 24
     },
     primaryColor: {
         color: "#909090",

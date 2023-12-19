@@ -28,8 +28,15 @@ export const SimpleHeader = ({ text, icon: Icon, backAction, color, fontSize }: 
                 </Link>
             </View>
             <View style={description}>
-                <Text style={font}>{text}</Text>
+                <Text style={style.headline}>{text}</Text>
             </View>
         </View>
     )
 }
+
+const style = StyleSheet.create({
+    headline: {
+        fontFamily: "karantina-light",
+        fontSize: 45,
+    }
+})

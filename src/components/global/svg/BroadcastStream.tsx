@@ -12,8 +12,8 @@ export function BroadcastStream(props: SVGProps<SVGSVGElement>) {
             <G 
                 fill="none" 
                 stroke="#222F3A" 
-                stroke-linecap="round" 
-                stroke-linejoin="round"
+                strokeLinecap="round" 
+                strokeLinejoin="round"
             >
                 <Path 
                     d="M13.5 9A6 6 0 0 1 5 .5ZM9.26 4.74L12 2"

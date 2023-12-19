@@ -1,20 +1,21 @@
+import Receive from '@/components/wallet/receive';
+import { Colors } from '@/constants';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function ReceiveUTXO() {
   return (
     <View style={styles.container}>
-      <Text>Receive UTXO</Text>
       {/* <StatusBar style="auto" /> */}
+      <Receive/>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
+    display: "flex",
     flex: 1,
-    backgroundColor: '#2E97A7',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: Colors.Yellow,
   },
 });

@@ -3,7 +3,7 @@ import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native
 import { useFonts } from 'expo-font';
 import { SplashScreen, Stack } from 'expo-router';
 import { useEffect } from 'react';
-import { useColorScheme } from 'react-native';
+import { View, useColorScheme } from 'react-native';
 
 export {
   // Catch any errors thrown by the Layout component.
@@ -19,9 +19,18 @@ export const unstable_settings = {
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
+
   const [loaded, error] = useFonts({
-    SpaceMono: require('../../assets/fonts/SpaceMono-Regular.ttf'),
-    ...FontAwesome.font,
+    "karantina-light": require('../../assets/fonts/Karantina/Karantina-Light.ttf'),
+    "karantina-regular": require('../../assets/fonts/Karantina/Karantina-Regular.ttf'),
+    //"karantina-bold": require('../../assets/fonts/Karantina/Karantina-Bold.ttf'),
+    //oxanium: require('../../assets/fonts/oxanium.ttf'),
+    coda: require('../../assets/fonts/Coda-Regular.ttf'),
+    saira: require('../../assets/fonts/Saira_Condensed/SairaCondensed-Light.ttf'),
+    "saira-bold": require('../../assets/fonts/Saira_Condensed/SairaCondensed-SemiBold.ttf'),
+    "share-techno-regular": require('../../assets/fonts/ShareTechMono-Regular.ttf'),
+    //SpaceMono: require('../../assets/fonts/SpaceMono-Regular.ttf'),
+    //...FontAwesome.font,
   });
 
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.
@@ -30,7 +39,10 @@ export default function RootLayout() {
   }, [error]);
 
   useEffect(() => {
+
+    console.log(loaded, error)
     if (loaded) {
+      console.log('loaded!')
       SplashScreen.hideAsync();
     }
   }, [loaded]);
@@ -47,9 +59,9 @@ function RootLayoutNav() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-      </Stack>
+        <Stack>
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        </Stack>
     </ThemeProvider>
   );
 }

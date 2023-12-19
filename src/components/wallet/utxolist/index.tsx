@@ -5,7 +5,7 @@ import { Colors } from '@/constants';
 import { NAVIGATION } from '@/navigation';
 import { EN } from '@/translations';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 const data: UtxoProps[] = [
   {
@@ -58,36 +58,32 @@ const UTXOList = () => {
     <>
       <SimpleHeader
         icon={Close}
-        text={EN.wallet.receive.headline}
+        text={EN.wallet.utxos.headline}
         backAction={NAVIGATION.wallet}
         color={Colors.Background}
         fontSize={30}
       />
       <View style={styles.main}>
-        {
-          data.map(utxo => (
-            <UtxoCard
-              key={`utxo-card-${utxo.id}`}
-              {...utxo}
-            />
-          ))
-        }
-        {
-          data.map(utxo => (
-            <UtxoCard
-              key={`utxo-card-${utxo.id}`}
-              {...utxo}
-            />
-          ))
-        }
-        {
-          data.map(utxo => (
-            <UtxoCard
-              key={`utxo-card-${utxo.id}`}
-              {...utxo}
-            />
-          ))
-        }
+        <FlatList
+          data={data}
+          renderItem={({ item }) => {
+              return ([
+                <UtxoCard
+                  key={`utxo-card-${item.id}`}
+                  {...item}
+                />,
+                <UtxoCard
+                  key={`utxo-card-${item.id}-b`}
+                  {...item}
+                />,
+                <UtxoCard
+                  key={`utxo-card-${item.id}-c`}
+                  {...item}
+                />
+              ])
+          }}
+          showsVerticalScrollIndicator={false}
+        />
       </View>
     </>
   );

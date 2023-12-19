@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     main: {
         backgroundColor: Colors.Background,
         marginTop: "auto",
-        height: "85%",
+        height: "80%",
         display:"flex",
         borderTopLeftRadius: 35,
         borderTopRightRadius: 35,

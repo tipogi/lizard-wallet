@@ -2,6 +2,7 @@ import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { BroadcastStream, Utxos, ShieldCheck } from '@/components/global/svg';
 import { Link, useRouter } from 'expo-router';
 import { NAVIGATION } from '@/constants/navigation';
+import { addDotsToValue } from '@/data/convertions';
 
 const WalletHeader = () => {
   return (
@@ -13,7 +14,7 @@ const WalletHeader = () => {
         </View>
         <View style={styles.options}>
           <BroadcastStream width={20} height={20}/>
-          <Link href={NAVIGATION.utxos} asChild>
+          <Link href={NAVIGATION.utxos} asChild style={styles.icon}>
             <TouchableOpacity>
               <Utxos width={15} height={15}/>
             </TouchableOpacity>
@@ -21,7 +22,7 @@ const WalletHeader = () => {
         </View>
       </View>
       <View style={styles.info}>
-        <Text style={styles.balance}>435.493 sat</Text>
+        <Text style={styles.balance}>{`${addDotsToValue(435493)} sat`}</Text>
       </View>
     </View>
   );
@@ -36,9 +37,12 @@ const styles = StyleSheet.create({
   },
   actionBar: {
     flex:1,
-    alignItems: 'flex-start',
+    alignItems: "center",
     justifyContent: 'space-between',
-    flexDirection:"row",
+    flexDirection:"row"
+  },
+  icon: {
+    padding: 15
   },
   status: {
     alignItems: 'center',
@@ -47,7 +51,9 @@ const styles = StyleSheet.create({
     flex: 4
   },
   description: {
-    paddingLeft: 10
+    paddingLeft: 10,
+    fontFamily: "karantina-light",
+    fontSize: 30
   },
   options: {
     justifyContent: "flex-end",
@@ -65,7 +71,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   balance: {
-    fontSize: 40
+    fontSize: 60,
+    //fontFamily: "share-techno-regular",
+    fontFamily: "karantina-regular"
   }
 });
 

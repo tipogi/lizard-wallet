@@ -1,7 +1,10 @@
 export const EN = {
     wallet: {
         receive: {
-            headline: "Unspent UTXO"
+            headline: "Receive"
+        },
+        utxos: {
+            headline: "Unspent UTXOs"
         }
     }
 }
