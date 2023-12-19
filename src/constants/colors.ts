@@ -6,7 +6,8 @@ export enum Colors {
     White = "#ffffff",
     Green = "#03DFA1",
     Yellow = "#FFBB38",
-    Red = "#FF8E72"
+    Red = "#FF8E72",
+    Grey = "#909090"
 }
 
 export type txColors = Colors.Green | Colors.Red | Colors.Yellow;

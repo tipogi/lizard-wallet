@@ -7,7 +7,7 @@ export type IconProps = {
     color: ColorValue
 }
 
-export function Tag(props: IconProps) {
+export function TagIcon(props: IconProps) {
     return (
         <Svg 
             width={props.fontSize}

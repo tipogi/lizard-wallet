@@ -1,4 +1,4 @@
-import { Drop, Grape, Palette, Tag, Tail } from "@/components/global/svg";
+import { Drop, Grape, Palette, TagIcon, Tail } from "@/components/global/svg";
 import { addDotsToValue } from "@/data/convertions";
 import { StyleSheet, Text, View } from "react-native";
 
@@ -24,7 +24,7 @@ const UtxoCard = ({ id, address, tag, index, color, balance }: UtxoProps) => {
                 <View style={utxoCardStyle.infoContainer}>
                     <View style={utxoCardStyle.tagContainer}>
                         <View style={utxoCardStyle.tagIconContainer}>
-                            <Tag fontSize={17} color={"#909090"}/>
+                            <TagIcon fontSize={17} color={"#909090"}/>
                         </View>
                         <Text style={[utxoCardStyle.tagText, utxoCardStyle.primaryColor]}>{`${tag}`}</Text>
                     </View>

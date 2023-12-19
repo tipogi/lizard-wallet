@@ -6,14 +6,18 @@ export { MultipleLayers } from './MultipleLayer';
 export { Close } from './Close';
 export { ScanAddress } from './ScanAddress';
 export { Wallet } from './Wallet';
-export { Tag } from './Tag';
+export { TagIcon } from './Tag';
 export { Grape } from './Grape';
 export { In } from './In';
 export { Out } from './Out';
-export { Qr } from './qr';
+export { Qr } from './Qr';
+export { Tick } from './Tick';
+export { Custom } from './Custom';
+
+// Exported using SVG format not tsx. That was done because hot corner
+//export { Settings } from './Settings';
 
 // Not in use
 export { Tail } from './Tail';
 export { Palette } from './Palette';
 export { Drop } from './Drop';
-//export { Settings } from './Settings';

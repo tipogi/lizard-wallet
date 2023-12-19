@@ -1,4 +1,4 @@
-import { In, Out, Tag } from "@/components/global/svg";
+import { In, Out, TagIcon } from "@/components/global/svg";
 import { transactionColor, txColors } from "@/constants";
 import { TxType } from "@/constants/bitcoin";
 import { addDotsToValue } from "@/data/convertions";
@@ -32,7 +32,7 @@ const Transaction = ({ tx_id, tag, balance, type, time}: TransactionProps) => {
                     </Text>
                 </View>
                 <View style={stylesheet.tag}>
-                    <Tag fontSize={17} color={"#c1c1c1"}/>
+                    <TagIcon fontSize={17} color={"#c1c1c1"}/>
                     <Text style={stylesheet.tagName}>{tag}</Text>
                 </View>
             </View>
