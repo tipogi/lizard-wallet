@@ -1,11 +1,5 @@
-import { SVGProps } from "react";
-import { ColorValue } from "react-native";
 import { G, Path, Svg } from "react-native-svg";
-
-export type IconProps = {
-    fontSize: number,
-    color: ColorValue
-}
+import { IconProps } from "./index";
 
 export function Tick(props: IconProps) {
     return (

@@ -1,11 +1,5 @@
-import { SVGProps } from "react";
-import { ColorValue } from "react-native";
 import { Path, Svg } from "react-native-svg";
-
-export interface IconProps {
-    fontSize: number,
-    color: ColorValue
-}
+import { IconProps } from "./index";
 
 export function Close(props: IconProps) {
     console.log(props)

@@ -1,8 +1,8 @@
-import { SVGProps } from "react";
 import { StyleSheet, View } from "react-native";
 import Svg, { Path } from "react-native-svg";
+import { IconProps } from "./index";
 
-export default function Settings(props: SVGProps<SVGSVGElement>) {
+export default function Settings(props: IconProps) {
   return (
     <View style={styles.container}>
       <Svg

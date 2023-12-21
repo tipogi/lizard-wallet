@@ -1,7 +1,7 @@
 import { SimpleHeader } from '@/components/global/layouts';
 import { Close } from '@/components/global/svg';
 import UtxoCard, { UtxoProps } from '@/components/wallet/utxolist/UtxoCard';
-import { Colors } from '@/constants';
+import { Colors, GrapeColors } from '@/constants';
 import { NAVIGATION } from '@/navigation';
 import { EN } from '@/translations';
 import { StatusBar } from 'expo-status-bar';
@@ -13,7 +13,7 @@ const data: UtxoProps[] = [
     address: 'tb1q0v43gtmh4tggzunlu3dvjsse0knu8qg2prge8t',
     tag: 'selling shells and eggs',
     index: 0,
-    color: '#ED5AB3',
+    color: GrapeColors.Red,
     balance: 32913
   },
   {
@@ -21,7 +21,7 @@ const data: UtxoProps[] = [
     address: 'tb1qsyl8rxycs5hw3jf9tfdj579747twdhpu3fd9ht',
     tag: 'Second Item',
     index: 1,
-    color: '#FF6C22',
+    color: GrapeColors.Orange,
     balance: 54832
   },
   {
@@ -29,7 +29,7 @@ const data: UtxoProps[] = [
     address: 'tb1qpwwvd2u30ztz46lv6uxekjl5qug2gyznvqg6zg',
     tag: 'Third Item',
     index: 2,
-    color: '#F4CE14',
+    color: GrapeColors.Blue,
     balance: 1954215
   },
   {
@@ -37,7 +37,7 @@ const data: UtxoProps[] = [
     address: 'tb1qe7un5dvqd26yp7mu0h35a0c9d05ylg2h8ealaq',
     tag: 'Forth Item',
     index: 3,
-    color: '#4D4C7D',
+    color: GrapeColors.Beige,
     balance: 648005
   },
   {
@@ -45,7 +45,7 @@ const data: UtxoProps[] = [
     address: 'tb1qazzxpq244xprjde46wf86ap3xmjt76fyq2m3jh',
     tag: 'Fith Item',
     index: 4,
-    color: '#2E97A7',
+    color: GrapeColors.Green,
     balance: 4128889
   },
 ]

@@ -1,9 +1,7 @@
 import { ColorValue, StyleSheet, Text, TouchableOpacity, View } from "react-native"
-import { Close } from "../svg";
-import { Colors } from "@/constants";
-import { Link, useRouter } from "expo-router";
+import { IconProps } from "../svg";
+import { Link } from "expo-router";
 import { smallDescription } from "@/styles/layout";
-import { IconProps } from "../svg/Close";
 import { NAVIGATION } from "@/navigation";
 
 interface SimpleHeaderProps {

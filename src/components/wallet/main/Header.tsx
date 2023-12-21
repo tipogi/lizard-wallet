@@ -1,22 +1,23 @@
 import { Button, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { BroadcastStream, Utxos, ShieldCheck } from '@/components/global/svg';
-import { Link, useRouter } from 'expo-router';
+import { Link } from 'expo-router';
 import { NAVIGATION } from '@/constants/navigation';
 import { addDotsToValue } from '@/data/convertions';
+import { Colors } from '@/constants';
 
 const WalletHeader = () => {
   return (
     <View style={styles.container}>
       <View style={styles.actionBar}>
         <View style={styles.status}>
-          <ShieldCheck width={30} height={30}/>
+          <ShieldCheck fontSize={30} color={Colors.Background}/>
           <Text style={styles.description}>Hot Wallet</Text>
         </View>
         <View style={styles.options}>
-          <BroadcastStream width={20} height={20}/>
+          <BroadcastStream fontSize={20} color={Colors.Background} />
           <Link href={NAVIGATION.utxos} asChild style={styles.icon}>
             <TouchableOpacity>
-              <Utxos width={15} height={15}/>
+              <Utxos fontSize={15} color={Colors.Background}/>
             </TouchableOpacity>
           </Link>
         </View>

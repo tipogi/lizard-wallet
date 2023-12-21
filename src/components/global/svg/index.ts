@@ -1,3 +1,11 @@
+import { ColorValue } from "react-native";
+
+export interface IconProps {
+    fontSize: number,
+    color: ColorValue,
+    rotate?: number
+}
+
 export { BroadcastStream } from "./BroadcastStream";
 export { ShieldCheck } from "./ShieldCheck";
 export { Utxos } from "./Utxos";

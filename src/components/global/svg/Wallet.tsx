@@ -1,7 +1,7 @@
-import { SVGProps } from "react";
 import { Path, Rect, Svg } from "react-native-svg";
+import { IconProps } from "./index";
 
-export function Wallet(props: SVGProps<SVGSVGElement>) {
+export function Wallet(props: IconProps) {
     return (
         <Svg 
             width={props.fontSize}

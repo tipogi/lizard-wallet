@@ -1,7 +1,7 @@
-import { SVGProps } from "react";
 import Svg, { Path } from "react-native-svg";
+import { IconProps } from "./index";
 
-export function MultipleLayers(props: SVGProps<SVGSVGElement>) {
+export function MultipleLayers(props: IconProps) {
     return (
       <Svg 
         width={props.fontSize}

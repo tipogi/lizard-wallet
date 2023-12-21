@@ -1,7 +1,7 @@
-import { SVGProps } from "react";
 import { Path, Svg } from "react-native-svg";
+import { IconProps } from "./index";
 
-export function LockClosed(props: SVGProps<SVGSVGElement>) {
+export function LockClosed(props: IconProps) {
     return (
         <Svg 
             width={props.fontSize}

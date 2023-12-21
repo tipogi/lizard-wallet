@@ -1,17 +1,17 @@
 import React from 'react';
-import { SVGProps } from "react";
 import Svg, { G, Path } from "react-native-svg";
+import { IconProps } from "./index";
 
-export function BroadcastStream(props: SVGProps<SVGSVGElement>) {
+export function BroadcastStream(props: IconProps) {
     return (
         <Svg 
-            width={props.width} 
-            height={props.height}  
+            width={props.fontSize} 
+            height={props.fontSize}  
             viewBox="0 0 14 14" 
         >
             <G 
                 fill="none" 
-                stroke="#222F3A" 
+                stroke={props.color} 
                 strokeLinecap="round" 
                 strokeLinejoin="round"
             >

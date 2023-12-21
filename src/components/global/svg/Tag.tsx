@@ -1,18 +1,27 @@
 import { SVGProps } from "react";
-import { ColorValue } from "react-native";
+import { ColorValue, StyleSheet } from "react-native";
 import { Path, Svg } from "react-native-svg";
 
 export type IconProps = {
     fontSize: number,
-    color: ColorValue
+    color: ColorValue,
+    rotate?: number
 }
 
 export function TagIcon(props: IconProps) {
+    // Rotate the icon or not
+    const rotateDeg = props.rotate ?
+         `${props.rotate}deg` : 
+         '0deg'
+
     return (
         <Svg 
             width={props.fontSize}
             height={props.fontSize}
             viewBox="0 0 24 24" 
+            style={{
+                transform: [{rotate: rotateDeg}],
+              }}
         >
             <Path 
                 fill={props.color}
@@ -22,3 +31,9 @@ export function TagIcon(props: IconProps) {
         </Svg>
     )
 }
+
+const style = StyleSheet.create({
+    rotate:  {
+        transform: [{rotateX: '90deg'}]
+    }
+})
