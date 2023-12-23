@@ -15,7 +15,7 @@ export const listStyle = StyleSheet.create({
         gap: 10
     },
     balance: {
-        fontSize: 26,
+        fontSize: 24,
         fontFamily: APP_FONT_BOLD
 
     },
@@ -27,7 +27,7 @@ export const listStyle = StyleSheet.create({
     tagName: {
         color: Colors.Grey,
         fontFamily: APP_FONT,
-        fontSize: 22,
+        fontSize: 20,
 
     },
     date: {
@@ -39,7 +39,7 @@ export const listStyle = StyleSheet.create({
     txDate: {
         color: Colors.WhiteSoft,
         fontFamily: APP_FONT,
-        fontSize: 22,
+        fontSize: 20,
         paddingRight: 10
     }
 })

@@ -12,26 +12,31 @@ export const styles = StyleSheet.create({
     },
     container: {
         display: "flex",
-        paddingLeft: 50,
-        paddingRight: 50,
-        gap: 30
+        paddingLeft: 20,
+        paddingRight: 25,
     },
     qr: {
-        marginTop: 40,
-        marginBottom: 50,
+        marginTop: 30,
+        marginBottom: 40,
         display: "flex",
         justifyContent: "center",
         alignItems: "center"
     },
     details: {
         fontFamily: "karantina-light",
-        fontSize: 30,
-        color: Colors.Grey
+        fontSize: 28,
+        color: Colors.Grey,
+        textAlign: "center"
     },
     derivationColor: {
         color: Colors.WhiteSoft,
         marginTop: 10,
-        fontSize: 25
+        fontSize: 20
+    },
+    othersContainer: {
+        paddingLeft: 30,
+        paddingRight: 30,
+        gap: 20
     },
     property: {
         display: "flex",

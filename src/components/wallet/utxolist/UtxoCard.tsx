@@ -62,7 +62,7 @@ const utxoCardStyle = StyleSheet.create({
         alignItems: 'flex-start',
     },
     address: {
-        fontSize: 26,
+        fontSize: 24,
         color: "#909090",
         fontFamily: "karantina-regular",
     },

@@ -20,25 +20,28 @@ const Receive = () => {
             <View style={styles.main}>
                 <View style={styles.container}>
                     <View style={styles.qr}>
-                        <Qr fontSize={200} color={Colors.Yellow}/>
+                        <Qr fontSize={200} color={Colors.Yellow} />
                         <Text style={styles.details}>tb1qe7un5dvqd26yp7mu0h35a0c9d05ylg2h8ealaq</Text>
                         <Text style={[styles.details, styles.derivationColor]}>m/84'/1'/0'/0/5</Text>
                     </View>
-                    <TagInput/>
-                    <View style={styles.property}>
-                        <Tick fontSize={22} color={Colors.Yellow}/>
-                        <Text style={styles.font}>{ EN.wallet.receive.reuse }</Text>
+                    <View style={styles.othersContainer}>
+                        <TagInput />
+                        <View style={styles.property}>
+                            <Tick fontSize={22} color={Colors.Yellow} />
+                            <Text style={styles.font}>{EN.wallet.receive.reuse}</Text>
+                        </View>
+                        <ColorInput />
+                        <View style={styles.property}>
+                            <Custom fontSize={22} color={Colors.Yellow} />
+                            <Text style={styles.font}>{EN.wallet.receive.customise}</Text>
+                        </View>
+                        <View style={styles.clipboard}>
+                            <TouchableOpacity style={styles.clipBtn}>
+                                <Text style={styles.clipTxt}>{EN.wallet.receive.clipboard}</Text>
+                            </TouchableOpacity>
+                        </View>
                     </View>
-                    <ColorInput/>
-                    <View style={styles.property}>
-                        <Custom fontSize={22} color={Colors.Yellow}/>
-                        <Text style={styles.font}>{ EN.wallet.receive.customise }</Text>
-                    </View>
-                    <View style={styles.clipboard}>
-                        <TouchableOpacity style={styles.clipBtn}>
-                            <Text style={styles.clipTxt}>{ EN.wallet.receive.clipboard }</Text>
-                        </TouchableOpacity>
-                    </View>
+
                 </View>
             </View>
         </>

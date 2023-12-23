@@ -10,11 +10,11 @@ const WalletHeader = () => {
     <View style={styles.container}>
       <View style={styles.actionBar}>
         <View style={styles.status}>
-          <ShieldCheck fontSize={30} color={Colors.Background}/>
+          <ShieldCheck fontSize={25} color={Colors.Background}/>
           <Text style={styles.description}>Hot Wallet</Text>
         </View>
         <View style={styles.options}>
-          <BroadcastStream fontSize={20} color={Colors.Background} />
+          <BroadcastStream fontSize={18} color={Colors.Background} />
           <Link href={NAVIGATION.utxos} asChild style={styles.icon}>
             <TouchableOpacity>
               <Utxos fontSize={15} color={Colors.Background}/>
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
   description: {
     paddingLeft: 10,
     fontFamily: "karantina-light",
-    fontSize: 30
+    fontSize: 24
   },
   options: {
     justifyContent: "flex-end",
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   balance: {
-    fontSize: 60,
+    fontSize: 52,
     //fontFamily: "share-techno-regular",
     fontFamily: "karantina-regular"
   }

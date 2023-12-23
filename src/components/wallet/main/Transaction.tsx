@@ -12,10 +12,11 @@ export interface TransactionProps {
     tag: string,
     balance: number,
     type: TxType,
-    time: string
+    time: string,
+    conf: number
 }
 
-const Transaction = ({ tx_id, tag, balance, type, time }: TransactionProps) => {
+const Transaction = ({ tx_id, tag, balance, type, time, conf }: TransactionProps) => {
 
     const color = transactionColor(type);
 
@@ -29,7 +30,7 @@ const Transaction = ({ tx_id, tag, balance, type, time }: TransactionProps) => {
         <Link
             href={{
                 pathname: NAVIGATION.transaction,
-                params: { conf: 0, type }
+                params: { conf, type }
             }}
             asChild
             style={listStyle.container}
