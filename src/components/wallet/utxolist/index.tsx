@@ -58,10 +58,9 @@ const UTXOList = () => {
     <>
       <SimpleHeader
         icon={Close}
-        text={EN.wallet.utxos.headline}
+        headline={EN.wallet.utxos.headline}
         backAction={NAVIGATION.wallet}
-        color={Colors.Background}
-        fontSize={30}
+        iconColor={Colors.Background}
       />
       <View style={styles.main}>
         <FlatList

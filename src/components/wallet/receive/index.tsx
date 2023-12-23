@@ -13,10 +13,9 @@ const Receive = () => {
         <>
             <SimpleHeader
                 icon={Close}
-                text={EN.wallet.receive.headline}
+                headline={EN.wallet.receive.headline}
                 backAction={NAVIGATION.wallet}
-                color={Colors.Background}
-                fontSize={30}
+                iconColor={Colors.Background}
             />
             <View style={styles.main}>
                 <View style={styles.container}>

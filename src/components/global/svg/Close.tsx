@@ -2,7 +2,6 @@ import { Path, Svg } from "react-native-svg";
 import { IconProps } from "./index";
 
 export function Close(props: IconProps) {
-    console.log(props)
     return (
         <Svg 
             width={props.fontSize}

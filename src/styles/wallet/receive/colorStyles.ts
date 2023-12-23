@@ -20,9 +20,9 @@ export const colorStyles = StyleSheet.create({
         justifyContent: "center"
     },
     colorContainer: {
-        width: 40,
-        height: 40,
-        borderRadius: 50
+        width: 30,
+        height: 30,
+        borderRadius: 10
     },
     selected: {
         borderWidth: 3,

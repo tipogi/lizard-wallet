@@ -11,6 +11,7 @@ export enum Colors {
     YellowPlaceholder = "#f9e5be",
     Red = "#FF8E72",
     Grey = "#909090",
+    Black = "#4D4D4D"
 }
 
 export enum GrapeColors {

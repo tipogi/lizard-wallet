@@ -67,7 +67,7 @@ export default function WalletLayout() {
       <Stack.Screen
         name={TX_SCREEN}
         options={{
-          statusBarColor: Colors.Yellow
+          statusBarColor: Colors.Background
           //animation: "default"
         }}
       />

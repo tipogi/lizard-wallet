@@ -1,12 +1,6 @@
-import { SVGProps } from "react";
-import { ColorValue, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 import { Path, Svg } from "react-native-svg";
-
-export type IconProps = {
-    fontSize: number,
-    color: ColorValue,
-    rotate?: number
-}
+import { IconProps } from ".";
 
 export function TagIcon(props: IconProps) {
     // Rotate the icon or not
