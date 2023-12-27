@@ -1,4 +1,5 @@
 import { Colors } from "@/constants";
+import { APP_FONT, H3, H5 } from "@/constants/font";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
@@ -23,15 +24,15 @@ export const styles = StyleSheet.create({
         alignItems: "center"
     },
     details: {
-        fontFamily: "karantina-light",
-        fontSize: 28,
+        fontFamily: APP_FONT,
+        fontSize: H3,
         color: Colors.Grey,
         textAlign: "center"
     },
     derivationColor: {
         color: Colors.WhiteSoft,
         marginTop: 10,
-        fontSize: 20
+        fontSize: H5
     },
     othersContainer: {
         paddingLeft: 30,
@@ -57,13 +58,13 @@ export const styles = StyleSheet.create({
     },
     clipTxt: {
         color: Colors.Background,
-        fontFamily: "karantina-light",
-        fontSize: 28,
+        fontFamily: APP_FONT,
+        fontSize: H3,
         padding: 10
     },
     font: {
-        fontFamily: "karantina-light",
-        fontSize: 22,
+        fontFamily: APP_FONT,
+        fontSize: H5,
         color: Colors.Grey,
         marginLeft: 15
     }

@@ -1,4 +1,5 @@
 import { APP_FONT } from "@/constants";
+import { H2, H4 } from "@/constants/font";
 import { StyleSheet } from "react-native";
 
 export const generalStyle = StyleSheet.create({
@@ -24,7 +25,7 @@ export const simpleHeaderStyle = StyleSheet.create({
     },
     headline: {
         fontFamily: APP_FONT,
-        fontSize: 45,
+        fontSize: H2,
     }
 })
 
@@ -38,6 +39,6 @@ export const iconHeaderStyle = StyleSheet.create({
     },
     headline: {
         fontFamily: APP_FONT,
-        fontSize: 25,
+        fontSize: H4,
     }
 })

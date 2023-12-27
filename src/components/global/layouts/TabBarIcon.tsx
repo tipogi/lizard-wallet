@@ -1,4 +1,4 @@
-import { TabBarSVGIcon } from "@/constants";
+import { Colors, TabBarSVGIcon } from "@/constants";
 import { StyleSheet, View } from "react-native";
 
 import SettingsFocus from '@/svg/settings-focus.svg';
@@ -30,7 +30,7 @@ export const TabBarIcon = ({ focused }: TabBarIconProps) => {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: "#03DFA1",
+        backgroundColor: Colors.Green,
         borderRadius: 40,
         height: 80,
         width: 80,

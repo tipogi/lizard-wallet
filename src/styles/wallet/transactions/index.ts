@@ -1,4 +1,5 @@
 import { APP_FONT, APP_FONT_BOLD, Colors, txColors } from "@/constants"
+import { H4, H5 } from "@/constants/font"
 import { StyleSheet } from "react-native"
 
 export const listStyle = StyleSheet.create({
@@ -15,7 +16,7 @@ export const listStyle = StyleSheet.create({
         gap: 10
     },
     balance: {
-        fontSize: 24,
+        fontSize: H4,
         fontFamily: APP_FONT_BOLD
 
     },
@@ -27,7 +28,7 @@ export const listStyle = StyleSheet.create({
     tagName: {
         color: Colors.Grey,
         fontFamily: APP_FONT,
-        fontSize: 20,
+        fontSize: H5,
 
     },
     date: {
@@ -39,7 +40,7 @@ export const listStyle = StyleSheet.create({
     txDate: {
         color: Colors.WhiteSoft,
         fontFamily: APP_FONT,
-        fontSize: 20,
+        fontSize: H5,
         paddingRight: 10
     }
 })

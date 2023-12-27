@@ -1,5 +1,6 @@
 import { Drop, Grape, Palette, TagIcon, Tail } from "@/components/global/svg";
 import { addDotsToValue } from "@/data/convertions";
+import { utxoCardStyle } from "@/styles/wallet";
 import { StyleSheet, Text, View } from "react-native";
 
 export interface UtxoProps {
@@ -40,73 +41,3 @@ const UtxoCard = ({ id, address, tag, index, color, balance }: UtxoProps) => {
 }
 
 export default UtxoCard;
-
-const utxoCardStyle = StyleSheet.create({
-    container: {
-        display: 'flex',
-        flexDirection: 'row',
-        marginTop: 17,
-        marginBottom: 17,
-    },
-    indexContainer: {
-        flex: 2,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
-    indexFont: {
-        color: "#909090",
-    },
-    addressContainer: {
-        flex: 9,
-        display: 'flex',
-        alignItems: 'flex-start',
-    },
-    address: {
-        fontSize: 24,
-        color: "#909090",
-        fontFamily: "karantina-regular",
-    },
-    infoContainer: {
-        flexDirection: 'row',
-        display: 'flex',
-        justifyContent: 'space-between',
-        width: '100%',
-        marginTop: 10
-    },
-    tagContainer: {
-        flexDirection: 'row',
-        alignItems:'center',
-        justifyContent: 'center'
-    },
-    tagText: {
-        fontFamily: "karantina-light",
-        fontSize: 20
-    },
-    tagIconContainer: {
-        marginRight: 5
-    },
-    colorContainer: {
-        display: 'flex',
-        flex: 2,
-        alignItems: 'center',
-        justifyContent: 'center',
-        marginBottom: 2
-    },
-    balance: {
-        color: "#FFBB38",
-        fontFamily: "karantina-regular",
-        fontSize: 24
-    },
-    primaryColor: {
-        color: "#909090",
-    }
-})
-
-const utxoColor = (color: string) => StyleSheet.create({
-    container: {
-        backgroundColor: color,
-        width: 12,
-        height: 12,
-        borderRadius: 3
-    }
-})
