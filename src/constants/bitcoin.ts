@@ -1,5 +1,6 @@
 export enum TxType {
-    SEND = 'SEND',
-    RECEIVE = 'RECEIVED',
-    PENDING = 'PENDING'
+    IN = 'IN',
+    OUT = 'OUT'
 }
+
+export const UNCONFIRMED_TX = 2;

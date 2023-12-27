@@ -21,6 +21,7 @@ export { Out } from './Out';
 export { Qr } from './Qr';
 export { Tick } from './Tick';
 export { Custom } from './Custom';
+export { Clock } from './Clock';
 
 // Exported using SVG format not tsx. That was done because hot corner
 //export { Settings } from './Settings';

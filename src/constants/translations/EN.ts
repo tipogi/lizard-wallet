@@ -19,6 +19,12 @@ export const EN = {
         },
         utxos: {
             headline: "Unspent UTXOs"
+        },
+        transactions: {
+            in: "received",
+            out: "send",
+            conf: "confirmations",
+            notConf: "unconfirmed"
         }
     },
     generic: {

@@ -1,8 +1,9 @@
 import { In, Out, TagIcon } from "@/components/global/svg";
-import { Colors, transactionColor } from "@/constants";
+import { Colors } from "@/constants";
 import { TxType } from "@/constants/bitcoin";
 import { NAVIGATION } from "@/constants/navigation";
 import { addDotsToValue } from "@/data/convertions";
+import { transactionColor } from "@/data/entities/transactions";
 import { listStyle, txTypeStyle } from "@/styles/wallet";
 import { Link } from "expo-router";
 import { Text, TouchableOpacity, View } from "react-native"
@@ -18,10 +19,10 @@ export interface TransactionProps {
 
 const Transaction = ({ tx_id, tag, balance, type, time, conf }: TransactionProps) => {
 
-    const color = transactionColor(type);
+    const color = transactionColor(type, conf);
 
     const renderTxTypeIcon = (type: TxType) => {
-        return type === TxType.SEND ?
+        return type === TxType.OUT ?
             <Out fontSize={17} color={Colors.Grey} /> :
             <In fontSize={17} color={Colors.Grey} />
     }
@@ -39,7 +40,7 @@ const Transaction = ({ tx_id, tag, balance, type, time, conf }: TransactionProps
                 <View style={[listStyle.content, txTypeStyle(color).border]}>
                     <View>
                         <Text style={[listStyle.balance, txTypeStyle(color).balance]}>
-                            {`${type === TxType.SEND ? '- ' : ''}${addDotsToValue(balance)} sat`}
+                            {`${type === TxType.OUT ? '- ' : ''}${addDotsToValue(balance)} sat`}
                         </Text>
                     </View>
                     <View style={listStyle.tag}>

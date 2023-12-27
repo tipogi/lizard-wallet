@@ -1,6 +1,5 @@
 import { Button, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import { Link } from 'expo-router';
 import { Colors } from '@/constants';
 import TransactionList from './TransactionList';
 import WalletHeader from './Header';

@@ -1,5 +1,3 @@
-import { TxType } from "./bitcoin";
-
 export enum Colors {
     Background = '#222F3A',
     BackgroundBlur = 'rgba(0, 0, 0, .9)',
@@ -26,17 +24,6 @@ export enum GrapeColors {
 }
 
 export type txColors = Colors.Green | Colors.Red | Colors.Yellow;
-
-export const transactionColor = (type: TxType): txColors => {
-    switch (type) {
-        case TxType.SEND:
-            return Colors.Red;
-        case TxType.RECEIVE:
-            return Colors.Green;
-        case TxType.PENDING:
-            return Colors.Yellow;
-    }
-}
 
 export const paletteColors: GrapeColors[] = [
     GrapeColors.Pink,

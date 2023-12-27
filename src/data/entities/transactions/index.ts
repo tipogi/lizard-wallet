@@ -1,13 +1,33 @@
-import { Colors } from "@/constants";
-import { TxType } from "@/constants/bitcoin";
+import { Clock, IconProps, In, Out } from "@/components/global/svg";
+import { Colors, txColors } from "@/constants";
+import { TxType, UNCONFIRMED_TX } from "@/constants/bitcoin";
+import { EN } from "@/constants/translations";
 
 // #TODO: expo-router UnknownOutputParams does not match, these arguments when we use the hook
-export const renderColor = (confirmations: any, txType: any): Colors => {
-    if (txType === TxType.SEND) {
-        return Colors.Red
-    } else if (confirmations < 2) {
-        return Colors.Yellow
-    } else {
-        return Colors.Green
+export const transactionColor = (type: any, conf: any): txColors => {
+    if (conf < UNCONFIRMED_TX) {
+        return Colors.Yellow; 
+    } else if (type === TxType.IN) {
+        return Colors.Green;
     }
+    return Colors.Red;
+}
+
+export const headerText = (type: any,conf: any): string => {
+    if (conf < UNCONFIRMED_TX) {
+        return `${EN.wallet.transactions.notConf} (${conf}/2)`; 
+    } else if (type === TxType.IN) {
+        return `${EN.wallet.transactions.in} (${conf} ${EN.wallet.transactions.conf})`;
+    }
+    return `${EN.wallet.transactions.out} (${conf} ${EN.wallet.transactions.conf})`;
+    
+}
+
+export const TransactionHeaderIcon = (type: any, conf: any): React.ElementType<IconProps> => {
+    if (conf < UNCONFIRMED_TX) {
+        return Clock; 
+    } else if (type === TxType.IN) {
+        return In;
+    }
+    return Out;
 }
