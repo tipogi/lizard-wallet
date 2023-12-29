@@ -4,7 +4,7 @@ import Transaction, { TransactionProps } from "./Transaction";
 
 const data: TransactionProps[] = [
     {
-        tx_id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+        tx_id: 'bd7acbeac1b146c2aed5-3ad53abb28ba',
         tag: 'selling shells and eggs',
         balance: 32913,
         type: TxType.OUT,
@@ -12,7 +12,7 @@ const data: TransactionProps[] = [
         conf: 3
     },
     {
-        tx_id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+        tx_id: '3ac68afcc60548d3a4f8fbd91aa97f63',
         tag: 'contribution in the komodo islands',
         balance: 54832,
         type: TxType.IN,
@@ -20,7 +20,7 @@ const data: TransactionProps[] = [
         conf: 0
     },
     {
-        tx_id: '58694a0f-3da1-471f-bd96-145571e29d72',
+        tx_id: '58694a0f3da1471fbd96-145571e29d72',
         tag: 'Rented a motorbike',
         balance: 1954215,
         type: TxType.OUT,
@@ -28,7 +28,7 @@ const data: TransactionProps[] = [
         conf: 1
     },
     {
-        tx_id: '58694a0f-3da1-471f-bd96-145571e29d43',
+        tx_id: '58694a0f3da1471fbd96-145571e29d43',
         tag: 'Buy local red berries ',
         balance: 648005,
         type: TxType.OUT,
@@ -36,14 +36,14 @@ const data: TransactionProps[] = [
         conf: 5
     },
     {
-        tx_id: '58694a0f-3da1-471f-bd96-145571e29d12',
+        tx_id: '58694a0f3da1471fbd96-145571e29d12',
         tag: 'Fund the wallet',
         balance: 4128889,
         type: TxType.IN,
         time: '24/11/23 18:18',
         conf: 3
     },{
-        tx_id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+        tx_id: 'bd7acbeac1b146c2aed5-3ad53abb28ba',
         tag: 'selling shells and eggs',
         balance: 32913,
         type: TxType.IN,

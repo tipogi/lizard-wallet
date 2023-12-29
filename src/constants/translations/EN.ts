@@ -21,10 +21,13 @@ export const EN = {
             headline: "Unspent UTXOs"
         },
         transactions: {
-            in: "received",
-            out: "send",
-            conf: "confirmations",
-            notConf: "unconfirmed"
+            single: {
+                in: "received",
+                out: "send",
+                conf: "confirmations",
+                notConf: "unconfirmed",
+                view: "view on explorer"
+            }
         }
     },
     generic: {

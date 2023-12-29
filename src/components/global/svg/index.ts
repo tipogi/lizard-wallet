@@ -22,6 +22,13 @@ export { Qr } from './Qr';
 export { Tick } from './Tick';
 export { Custom } from './Custom';
 export { Clock } from './Clock';
+export { BarChart } from './BarChart';
+export { Format } from './Format';
+export { HashTag } from './HashTag';
+export { TimeLock } from './TimeLock';
+export { Verified } from './Verified';
+export { Version } from './Version';
+export { Share } from './Share';
 
 // Exported using SVG format not tsx. That was done because hot corner
 //export { Settings } from './Settings';
