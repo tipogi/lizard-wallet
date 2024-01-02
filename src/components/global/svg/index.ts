@@ -29,6 +29,9 @@ export { TimeLock } from './TimeLock';
 export { Verified } from './Verified';
 export { Version } from './Version';
 export { Share } from './Share';
+export { Color } from './Color';
+export { Fingerprint } from './Fingerprint';
+export { Sign } from './Sign';
 
 // Exported using SVG format not tsx. That was done because hot corner
 //export { Settings } from './Settings';

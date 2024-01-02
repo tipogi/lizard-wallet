@@ -4,6 +4,7 @@ export enum Colors {
     BottomTab = '#222F3A',
     White = "#ffffff",
     WhiteSoft = "#c1c1c1",
+    AlmostWhite = "#e1e1e1",
     Green = "#03DFA1",
     Yellow = "#FFBB38",
     YellowPlaceholder = "#f9e5be",

@@ -6,13 +6,11 @@ export function LockClosed(props: IconProps) {
         <Svg 
             width={props.fontSize}
             height={props.fontSize} 
-            viewBox="0 0 20 20" 
+            viewBox="0 0 256 256" 
         >
             <Path 
                 fill={props.color}
-                fillRule="evenodd" 
-                d="M5 9V7a5 5 0 0 1 10 0v2a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2Zm8-2v2H7V7a3 3 0 0 1 6 0Z" 
-                clipRule="evenodd"
+                d="M208 80h-32V56a48 48 0 0 0-96 0v24H48a16 16 0 0 0-16 16v112a16 16 0 0 0 16 16h160a16 16 0 0 0 16-16V96a16 16 0 0 0-16-16M96 56a32 32 0 0 1 64 0v24H96Zm112 152H48V96h160z"
             />
         </Svg>
     )
