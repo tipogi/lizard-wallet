@@ -7,6 +7,6 @@ Descriptor based watch only wallet
 npx create-expo-app@latest --template
 # Start the project
 npx expo start [-c]
-# OR
-npx expo android
+# Run with native code (before that create the prebuild)
+npx expo run:android
 ```

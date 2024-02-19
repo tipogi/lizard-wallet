@@ -10,7 +10,6 @@ import { useState } from "react";
 const accounts = [
     {
         fingerprint: "spacer-a",
-        // color: "white",
     },
     {
         name: "daily wallet",
@@ -67,27 +66,27 @@ const AccountComponent = () => {
                     <AccountDetail
                         icon={HashTag}
                         iconSize={24}
-                        text={accounts[index].name !== undefined ? accounts[index].name : 'as'}
+                        text={accounts[index].name }
                     />
                     <AccountDetail
                         icon={Sign}
                         iconSize={24}
-                        text={accounts[index].derivationPath !== undefined ? accounts[index].derivationPath : 'as'}
+                        text={accounts[index].derivationPath }
                     />
                      <AccountDetail
                         icon={Fingerprint}
                         iconSize={24}
-                        text={accounts[index].fingerprint !== undefined ? accounts[index].fingerprint : 'as'}
+                        text={accounts[index].fingerprint }
                     />
                      <AccountDetail
                         icon={LockClosed}
                         iconSize={24}
-                        text={accounts[index].balance !== undefined ? accounts[index].balance : 'as'}
+                        text={accounts[index].balance }
                     />
                      <AccountDetail
                         icon={Color}
                         iconSize={24}
-                        text={accounts[index].color !== undefined ? accounts[index].color : 'as'}
+                        text={accounts[index].color }
                     />
                 </View>
             </View>

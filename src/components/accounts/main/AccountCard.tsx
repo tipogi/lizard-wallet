@@ -1,5 +1,6 @@
 import { GrapeColors } from "@/constants";
-import { genericCardStyle } from "@/styles/accounts";
+import { addDotsToValue } from "@/data/convertions";
+import { cardStyle, genericCardStyle } from "@/styles/accounts";
 import { Animated, Dimensions, Text, View } from "react-native";
 const { height, width } = Dimensions.get('window');
 
@@ -36,9 +37,12 @@ const AccountCard = ({ index, item, scrollX }: AccountCardProps) => {
 
     return (
         <View style={{ width: ITEM_SIZE, height: ITEM_HEIGHT + 20 }}>
-            <Animated.View style={[genericCardStyle(SPACING, ITEM_HEIGHT, translateY).container]}>
-                <Text>
+            <Animated.View style={[genericCardStyle(SPACING, ITEM_HEIGHT, translateY).container, cardStyle.container]}>
+                <Text style={cardStyle.name}>
                     {item.name}
+                </Text>
+                <Text style={cardStyle.balance}>
+                    {`${addDotsToValue(item.balance)} sat`}
                 </Text>
             </Animated.View>
         </View>

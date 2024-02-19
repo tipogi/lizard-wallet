@@ -12,7 +12,7 @@ const WalletHeader = () => {
       <View style={headerStyle.actionBar}>
         <View style={headerStyle.status}>
           <ShieldCheck fontSize={25} color={Colors.Background}/>
-          <Text style={headerStyle.description}>hot wallet</Text>
+          <Text style={headerStyle.description}>cold wallet</Text>
         </View>
         <View style={headerStyle.options}>
           <BroadcastStream fontSize={18} color={Colors.Background} />

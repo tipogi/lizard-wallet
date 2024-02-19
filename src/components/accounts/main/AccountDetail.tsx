@@ -6,7 +6,7 @@ import { Text, View } from "react-native";
 interface TxDetailProps {
     icon: React.ElementType<IconProps>,
     iconSize: number,
-    text: string
+    text: string | undefined
 }
 
 const AccountDetail = ({ icon: Icon, iconSize, text }: TxDetailProps) => {

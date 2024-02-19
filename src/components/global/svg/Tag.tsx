@@ -13,9 +13,6 @@ export function TagIcon(props: IconProps) {
             width={props.fontSize}
             height={props.fontSize}
             viewBox="0 0 24 24" 
-            style={{
-                transform: [{rotate: rotateDeg}],
-              }}
         >
             <Path 
                 fill={props.color}
@@ -26,8 +23,8 @@ export function TagIcon(props: IconProps) {
     )
 }
 
-const style = StyleSheet.create({
-    rotate:  {
-        transform: [{rotateX: '90deg'}]
-    }
-})
+// const style = StyleSheet.create({
+//     rotate:  {
+//         transform: [{rotateX: '90deg'}]
+//     }
+// })
