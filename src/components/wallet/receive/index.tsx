@@ -1,5 +1,5 @@
 import { SimpleHeader } from "@/components/global/layouts"
-import { Close, Custom, Qr, Tick } from "@/components/global/svg";
+import { Close, Custom, Qr, Tick } from "@/assets/svg";
 import { Colors } from "@/constants"
 import { NAVIGATION } from "@/constants/navigation"
 import { EN } from "@/constants/translations"

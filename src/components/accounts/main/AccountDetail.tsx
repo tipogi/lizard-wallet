@@ -1,4 +1,4 @@
-import { IconProps } from "@/components/global/svg";
+import { IconProps } from "@/assets/svg";
 import { Colors } from "@/constants";
 import { detailStyle } from "@/styles/accounts";
 import { Text, View } from "react-native";

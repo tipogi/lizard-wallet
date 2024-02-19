@@ -1,5 +1,5 @@
 import CustomModal from "@/components/global/elements/CustomModal";
-import { Grape } from "@/components/global/svg";
+import { Grape } from "@/assets/svg";
 import { Colors } from "@/constants";
 import { paletteColors } from "@/constants/colors";
 import { EN } from "@/constants/translations";

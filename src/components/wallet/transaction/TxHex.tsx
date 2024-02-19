@@ -1,4 +1,4 @@
-import { Format, Share } from "@/components/global/svg";
+import { Format, Share } from "@/assets/svg";
 import { Colors } from "@/constants";
 import { H4 } from "@/constants/font";
 import { detailStyle, dynamicBackground } from "@/styles/wallet";

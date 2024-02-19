@@ -34,9 +34,9 @@ export { Fingerprint } from './Fingerprint';
 export { Sign } from './Sign';
 
 // Exported using SVG format not tsx. That was done because hot corner
-//export { Settings } from './Settings';
+export { Settings } from './Settings';
 
 // Not in use
-export { Tail } from './Tail';
-export { Palette } from './Palette';
-export { Drop } from './Drop';
+//export { Tail } from './Tail';
+//export { Palette } from './Palette';
+//export { Drop } from './Drop';

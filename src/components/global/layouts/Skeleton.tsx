@@ -1,6 +1,6 @@
 import { DimensionValue, View } from "react-native";
 import { Colors } from "@/constants";
-import { Close, IconProps } from "../svg";
+import { Close, IconProps } from "@/assets/svg";
 import { EN } from "@/constants/translations";
 import { NAVIGATION } from "@/constants/navigation";
 import { dynamicSkeletonStyle } from "@/styles/global";

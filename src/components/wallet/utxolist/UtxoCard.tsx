@@ -1,4 +1,4 @@
-import { Drop, Grape, Palette, TagIcon, Tail } from "@/components/global/svg";
+import { Drop, Grape, Palette, TagIcon, Tail } from "@/assets/svg";
 import { addDotsToValue } from "@/data/convertions";
 import { utxoCardStyle } from "@/styles/wallet";
 import { StyleSheet, Text, View } from "react-native";

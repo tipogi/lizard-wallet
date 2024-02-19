@@ -1,5 +1,5 @@
 import CustomModal from "@/components/global/elements/CustomModal";
-import { TagIcon } from "@/components/global/svg";
+import { TagIcon } from "@/assets/svg";
 import { Colors } from "@/constants";
 import { EN } from "@/constants/translations";
 import { tagInputStyle } from "@/styles/wallet";

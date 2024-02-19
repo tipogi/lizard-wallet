@@ -1,6 +1,6 @@
 import { Skeleton } from "@/components/global/layouts";
 import { HeaderType } from "@/components/global/layouts/headers";
-import { BarChart, HashTag, TimeLock, Verified, Version } from "@/components/global/svg";
+import { BarChart, HashTag, TimeLock, Verified, Version } from "@/assets/svg";
 import { APP_FONT, H3, H4 } from "@/constants/font";
 import { NAVIGATION } from "@/constants/navigation";
 import { TransactionHeaderIcon, headerText, transactionColor } from "@/data/entities/transactions";

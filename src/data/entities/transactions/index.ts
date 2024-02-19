@@ -1,4 +1,4 @@
-import { Clock, IconProps, In, Out } from "@/components/global/svg";
+import { Clock, IconProps, In, Out } from "@/assets/svg";
 import { Colors, txColors } from "@/constants";
 import { TxType, UNCONFIRMED_TX } from "@/constants/bitcoin";
 import { EN } from "@/constants/translations";

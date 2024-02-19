@@ -1,9 +1,8 @@
 import { Tabs, usePathname } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
-import { MultipleLayers, ScanAddress, Wallet } from '@/components/global/svg';
+import { MultipleLayers, ScanAddress, Wallet, Settings } from '@/assets/svg';
 import { ACCOUNT_SCREEN, RECEIVE_SCREEN, ROOT, SETTINGS_SCREEN, WALLET_SCREEN } from '@/constants/navigation';
-import { TabBarIcon } from '@/components/global/layouts';
-import { TabBarSVGIcon } from '@/constants';
+import { Colors } from '@/constants';
 
 export const unstable_settings = {
   // Ensure that reloading on `/` keeps a back button present.
@@ -32,8 +31,8 @@ export default function TabsLayout() {
             left:20,
             right: 20,
             //elevation: 0,
-            backgroundColor: "#2E3B46",
-            borderColor: "#2E3B46",
+            backgroundColor: Colors.Navigation,
+            borderColor: Colors.Navigation,
             borderRadius: 15,
             height: 60,
             // 'none' does not avoid the hot corner navigation
@@ -90,7 +89,7 @@ export default function TabsLayout() {
             options={{
               tabBarIcon: ({focused}) => {
                 return (
-                  <TabBarIcon iconType={TabBarSVGIcon.Settings} focused={focused}/>
+                  <Settings focused={focused}/>
                 )
               }
             }}

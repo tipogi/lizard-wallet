@@ -1,7 +1,7 @@
 export enum Colors {
     Background = '#222F3A',
+    Navigation = '#2E3B46',
     BackgroundBlur = 'rgba(0, 0, 0, .9)',
-    BottomTab = '#222F3A',
     White = "#ffffff",
     WhiteSoft = "#c1c1c1",
     AlmostWhite = "#e1e1e1",

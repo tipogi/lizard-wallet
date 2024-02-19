@@ -1,11 +1,10 @@
 import { SimpleHeader } from '@/components/global/layouts';
-import { Close } from '@/components/global/svg';
+import { Close } from '@/assets/svg';
 import UtxoCard, { UtxoProps } from '@/components/wallet/utxolist/UtxoCard';
 import { Colors, GrapeColors } from '@/constants';
-import { NAVIGATION } from '@/navigation';
-import { EN } from '@/translations';
-import { StatusBar } from 'expo-status-bar';
-import { FlatList, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { NAVIGATION } from '@navigation';
+import { EN } from '@translations';
+import { FlatList, StyleSheet, View } from 'react-native';
 
 const data: UtxoProps[] = [
   {

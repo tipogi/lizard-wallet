@@ -1,8 +1,8 @@
 import { Text, TouchableOpacity, View } from "react-native"
-import { Close, IconProps } from "../../svg";
+import { Close, IconProps } from "@/assets/svg";
 import { Link } from "expo-router";
 import { generalStyle, iconHeaderStyle } from "@/styles/global";
-import { NAVIGATION } from "@/navigation";
+import { NAVIGATION } from "@navigation";
 import { Colors } from "@/constants";
 
 interface IconHeaderProps {

@@ -1,4 +1,4 @@
-import { In, Out, TagIcon } from "@/components/global/svg";
+import { In, Out, TagIcon } from "@/assets/svg";
 import { Colors } from "@/constants";
 import { TxType } from "@/constants/bitcoin";
 import { NAVIGATION } from "@/constants/navigation";

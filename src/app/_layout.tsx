@@ -22,14 +22,14 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
 
   const [loaded, error] = useFonts({
-    "karantina-light": require('../../assets/fonts/Karantina/Karantina-Light.ttf'),
-    "karantina-regular": require('../../assets/fonts/Karantina/Karantina-Regular.ttf'),
+    "karantina-light": require('@/assets/fonts/Karantina/Karantina-Light.ttf'),
+    "karantina-regular": require('@/assets/fonts/Karantina/Karantina-Regular.ttf'),
     //"karantina-bold": require('../../assets/fonts/Karantina/Karantina-Bold.ttf'),
     //oxanium: require('../../assets/fonts/oxanium.ttf'),
-    coda: require('../../assets/fonts/Coda-Regular.ttf'),
-    saira: require('../../assets/fonts/Saira_Condensed/SairaCondensed-Light.ttf'),
-    "saira-bold": require('../../assets/fonts/Saira_Condensed/SairaCondensed-SemiBold.ttf'),
-    "share-techno-regular": require('../../assets/fonts/ShareTechMono-Regular.ttf'),
+    coda: require('@/assets/fonts/Coda-Regular.ttf'),
+    saira: require('@/assets/fonts/Saira_Condensed/SairaCondensed-Light.ttf'),
+    "saira-bold": require('@/assets/fonts/Saira_Condensed/SairaCondensed-SemiBold.ttf'),
+    "share-techno-regular": require('@/assets/fonts/ShareTechMono-Regular.ttf'),
     //SpaceMono: require('../../assets/fonts/SpaceMono-Regular.ttf'),
     //...FontAwesome.font,
   });

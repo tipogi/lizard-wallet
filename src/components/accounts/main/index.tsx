@@ -3,7 +3,7 @@ import { View, StyleSheet, Text } from "react-native";
 import AccountsHeader from "./Header";
 import AccountCardList from "./AccountCardList";
 import AccountDetail from "./AccountDetail";
-import { Color, Fingerprint, HashTag, LockClosed, Sign } from "@/components/global/svg";
+import { Color, Fingerprint, HashTag, LockClosed, Sign } from "@/assets/svg";
 import { useState } from "react";
 
 

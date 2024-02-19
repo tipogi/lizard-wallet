@@ -1,4 +1,4 @@
-import { Format, Share, TagIcon } from "@/components/global/svg";
+import { Format, Share, TagIcon } from "@/assets/svg";
 import { Colors } from "@/constants";
 import { APP_FONT, H4 } from "@/constants/font";
 import { detailStyle, dynamicBackground } from "@/styles/wallet";

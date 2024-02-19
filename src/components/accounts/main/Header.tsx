@@ -1,5 +1,5 @@
 import { TouchableOpacity, View } from 'react-native';
-import { BroadcastStream, Utxos, ShieldCheck } from '@/components/global/svg';
+import { BroadcastStream, Utxos, ShieldCheck } from '@/assets/svg';
 import { Link } from 'expo-router';
 import { NAVIGATION } from '@/constants/navigation';
 import { Colors } from '@/constants';
