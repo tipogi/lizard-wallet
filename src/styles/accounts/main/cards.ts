@@ -1,5 +1,5 @@
 import { APP_FONT, Colors } from "@/constants";
-import { APP_FONT_BOLD, H2, H3, H4 } from "@/constants/font";
+import { APP_FONT_BOLD, H2, H2_5, H3, H4 } from "@/constants/font";
 import { Animated, StyleSheet } from "react-native";
 
 export const cardListStyle = StyleSheet.create({
@@ -17,13 +17,13 @@ export const cardListStyle = StyleSheet.create({
 });
 
 export const cardStyle = StyleSheet.create({
-    container: {
+    _container: {
         display: "flex",
         justifyContent: "center"
     },
     name: {
         fontFamily: APP_FONT_BOLD,
-        fontSize: H2,
+        fontSize: H2_5,
         color: Colors.Background
     },
     balance: {
@@ -34,14 +34,15 @@ export const cardStyle = StyleSheet.create({
 
 export const genericCardStyle = (SPACING: number, ITEM_HEIGHT: number, translateY: Animated.AnimatedInterpolation<string | number>) => StyleSheet.create({
     container: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
         marginTop: 10,
         marginHorizontal: SPACING,
         padding: SPACING * 2,
-        alignItems: 'center',
-        backgroundColor: "linear-gradient(135deg, #bd6772, #53223f)",//"#4D6579",//Colors.Green,
         borderRadius: 10,
-        //transform: [{ translateY }],
         height: ITEM_HEIGHT
+        //backgroundColor: "#D9DFE7", //"#F3F8FF",//"#BFC6CE",//"#81F4AC", //"#15F5BA",
     }
 })
 
@@ -52,6 +53,7 @@ export const indexStyle = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         gap: 10,
+        marginTop: 15
     },
     element: {
         height: 8,

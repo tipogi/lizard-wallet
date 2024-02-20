@@ -6,7 +6,7 @@ import AccountDetail from "./AccountDetail";
 import { Color, Fingerprint, HashTag, LockClosed, Sign } from "@/assets/svg";
 import { useState } from "react";
 
-
+// We use first and last elements for the slide effect
 const accounts = [
     {
         fingerprint: "spacer-a",
@@ -14,7 +14,7 @@ const accounts = [
     {
         name: "daily wallet",
         color: GrapeColors.Green,
-        balance: "1353299",
+        balance: 1353299,
         fingerprint: "f8x92ks0",
         derivationPath: "m/84'/1'/0'/0",
         policy: false
@@ -22,7 +22,7 @@ const accounts = [
     {
         name: "ice cube wallet",
         color: GrapeColors.Red,
-        balance: "34864",
+        balance: 34864,
         fingerprint: "m38d00d2",
         derivationPath: "m/84'/1'/0'/0",
         policy: true
@@ -30,7 +30,7 @@ const accounts = [
     {
         name: "work partners wallet",
         color: GrapeColors.Orange,
-        balance: "5487",
+        balance: 5487,
         fingerprint: "xod254dd0",
         derivationPath: "m/84'/1'/0'/0",
         policy: false
@@ -38,7 +38,7 @@ const accounts = [
     {
         name: "bom xakalaka",
         color: GrapeColors.Blue,
-        balance: "774511",
+        balance: 774511,
         fingerprint: "x3292jdd0",
         derivationPath: "m/84'/1'/0'/0",
         policy: false

@@ -27,7 +27,12 @@ const AccountCardList = ({ accounts, index, setIndex }: AccountCardListProps) =>
     const renderAccountIndexDots = (selectedIndex: number) => {
         // Hard coded index
         return [1, 2, 3, 4].map((index) => {
-            return <View key={`dot-${index}`} style={[indexStyle.element, indexStyleGeneric(index, selectedIndex).focus]} />
+            return (
+                <View 
+                    key={`dot-${index}`} 
+                    style={[indexStyle.element, indexStyleGeneric(index, selectedIndex).focus]} 
+                />
+            )
         })
     }
 
@@ -51,19 +56,21 @@ const AccountCardList = ({ accounts, index, setIndex }: AccountCardListProps) =>
                 )}
                 onMomentumScrollEnd={async (ev) => {
                     // Calculate from the index from the list width (x)
+                    // The list content, will start in index=1 and will finish length -1 
+                    // This is because the way that it is designed the slider 
                     const newIndex = Math.round(ev.nativeEvent.contentOffset.x / ITEM_SIZE) + 1;
                     if (newIndex !== index) {
                         setIndex(newIndex);
                         console.log('Dispatch react event');
                         dispatch(updateSelectedWallet(newIndex))
-                        const fingerprint = SecureStore.getItem(`fingerprint_${newIndex-1}`)
+                        const fingerprint = SecureStore.getItem(`fingerprint_${newIndex}`)
                         if (fingerprint) {
                             console.log('Fingerprint does exist in the secure store, GET')
-                            //console.log(await SecureStore.deleteItemAsync(`fingerprint_${newIndex-1}`), `fingerprint_${newIndex-1}`);
-                            console.log(SecureStore.getItem(`fingerprint_${newIndex-1}`), 'GET')
+                            //console.log(await SecureStore.deleteItemAsync(`fingerprint_${newIndex}`), `fingerprint_${newIndex}`);
+                            console.log(SecureStore.getItem(`fingerprint_${newIndex}`), 'GET')
                         } else {
                             console.log('Fingerprint does not exist in the secure store, SET')
-                            SecureStore.setItemAsync(`fingerprint_${newIndex-1}`, accounts[newIndex-1].fingerprint)
+                            SecureStore.setItemAsync(`fingerprint_${newIndex}`, accounts[newIndex].fingerprint)
                         }
                         
                     }

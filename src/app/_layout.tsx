@@ -30,6 +30,8 @@ export default function RootLayout() {
     saira: require('@/assets/fonts/Saira_Condensed/SairaCondensed-Light.ttf'),
     "saira-bold": require('@/assets/fonts/Saira_Condensed/SairaCondensed-SemiBold.ttf'),
     "share-techno-regular": require('@/assets/fonts/ShareTechMono-Regular.ttf'),
+    urbanist: require('@/assets/fonts/Urbanist/Urbanist-Regular.ttf'),
+    'urbanist-bold':require('@/assets/fonts/Urbanist/Urbanist-SemiBold.ttf'),
     //SpaceMono: require('../../assets/fonts/SpaceMono-Regular.ttf'),
     //...FontAwesome.font,
   });
