@@ -5,53 +5,14 @@ import AccountCardList from "./AccountCardList";
 import AccountDetail from "./AccountDetail";
 import { Color, Fingerprint, HashTag, LockClosed, Sign } from "@/assets/svg";
 import { useState } from "react";
-
-// We use first and last elements for the slide effect
-const accounts = [
-    {
-        fingerprint: "spacer-a",
-    },
-    {
-        name: "daily wallet",
-        color: GrapeColors.Green,
-        balance: 1353299,
-        fingerprint: "f8x92ks0",
-        derivationPath: "m/84'/1'/0'/0",
-        policy: false
-    },
-    {
-        name: "ice cube wallet",
-        color: GrapeColors.Red,
-        balance: 34864,
-        fingerprint: "m38d00d2",
-        derivationPath: "m/84'/1'/0'/0",
-        policy: true
-    },
-    {
-        name: "work partners wallet",
-        color: GrapeColors.Orange,
-        balance: 5487,
-        fingerprint: "xod254dd0",
-        derivationPath: "m/84'/1'/0'/0",
-        policy: false
-    },
-    {
-        name: "bom xakalaka",
-        color: GrapeColors.Blue,
-        balance: 774511,
-        fingerprint: "x3292jdd0",
-        derivationPath: "m/84'/1'/0'/0",
-        policy: false
-    },
-    {
-        fingerprint: "spacer-b",
-    }
-]
+import { useAppSelector } from "@/hooks/store";
+import { accountsSelector } from "@/store/selectors/account";
 
 const AccountComponent = () => {
 
-
     const [index, setIndex] = useState(1);
+
+    const accounts = useAppSelector(accountsSelector)
 
     return (
         <View style={accountStyle.container}>
@@ -71,7 +32,7 @@ const AccountComponent = () => {
                     <AccountDetail
                         icon={Sign}
                         iconSize={24}
-                        text={accounts[index].derivationPath }
+                        text={accounts[index].descriptor }
                     />
                      <AccountDetail
                         icon={Fingerprint}
@@ -86,7 +47,7 @@ const AccountComponent = () => {
                      <AccountDetail
                         icon={Color}
                         iconSize={24}
-                        text={accounts[index].color }
+                        text={accounts[index].colors }
                     />
                 </View>
             </View>

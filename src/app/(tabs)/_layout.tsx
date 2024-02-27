@@ -26,7 +26,7 @@ export default function TabsLayout() {
             position: "absolute",
             // Hide the tabBar in a tricky way. Display option (display: 'flex' : 'none'), activates the hot navigation corner
             // Send the tabBar to a position that we cannot see. In that case below the screen
-            // TODO: Check if in the future expo team has a solution or find another way
+            // TODO: Check if in the future expo team has a solution or find another way.
             bottom: showTabBar ? 25 : -100,
             left:20,
             right: 20,

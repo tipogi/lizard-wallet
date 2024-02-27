@@ -4,8 +4,11 @@ import { useRef, useState } from "react";
 import { Animated, Dimensions, Text, View } from "react-native";
 import AccountCard from "./AccountCard";
 import useAppDispatch from "@/store/hooks/useAppDispatch";
-import { updateSelectedWallet } from '../../../store/slices/wallet';
+import { updateSelectedAccount } from '../../../store/slices/accounts';
 import * as SecureStore from 'expo-secure-store';
+import { useAppSelector } from "@/hooks/store";
+import { accountAmountSelector } from "@/store/selectors/account";
+import { times } from 'lodash';
 
 const { width } = Dimensions.get('window');
 
@@ -20,17 +23,18 @@ interface AccountCardListProps {
 
 const AccountCardList = ({ accounts, index, setIndex }: AccountCardListProps) => {
 
-  const dispatch = useAppDispatch()
+    const dispatch = useAppDispatch();
+    const accountsNumber = useAppSelector(accountAmountSelector);
 
     const scrollX = useRef(new Animated.Value(0)).current;
 
     const renderAccountIndexDots = (selectedIndex: number) => {
         // Hard coded index
-        return [1, 2, 3, 4].map((index) => {
+        return times(accountsNumber, (index) => {
             return (
-                <View 
-                    key={`dot-${index}`} 
-                    style={[indexStyle.element, indexStyleGeneric(index, selectedIndex).focus]} 
+                <View
+                    key={`dot-${index + 1}`}
+                    style={[indexStyle.element, indexStyleGeneric(index + 1, selectedIndex).focus]}
                 />
             )
         })
@@ -62,7 +66,7 @@ const AccountCardList = ({ accounts, index, setIndex }: AccountCardListProps) =>
                     if (newIndex !== index) {
                         setIndex(newIndex);
                         console.log('Dispatch react event');
-                        dispatch(updateSelectedWallet(newIndex))
+                        dispatch(updateSelectedAccount(newIndex))
                         const fingerprint = SecureStore.getItem(`fingerprint_${newIndex}`)
                         if (fingerprint) {
                             console.log('Fingerprint does exist in the secure store, GET')
@@ -72,7 +76,7 @@ const AccountCardList = ({ accounts, index, setIndex }: AccountCardListProps) =>
                             console.log('Fingerprint does not exist in the secure store, SET')
                             SecureStore.setItemAsync(`fingerprint_${newIndex}`, accounts[newIndex].fingerprint)
                         }
-                        
+
                     }
                 }}
                 scrollEventThrottle={16}
@@ -90,7 +94,7 @@ const AccountCardList = ({ accounts, index, setIndex }: AccountCardListProps) =>
                 }}
             />
             <View style={indexStyle.container}>
-                { renderAccountIndexDots(index) }
+                {renderAccountIndexDots(index)}
             </View>
         </View>
     )

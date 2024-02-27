@@ -4,13 +4,13 @@ import { initializeMMKVFlipper } from 'react-native-mmkv-flipper-plugin';
 
 const __ENABLE_MMKV_FLIPPER__ = true;
 
-const storage = new MMKV();
+export const storage = new MMKV();
 
 if (__ENABLE_MMKV_FLIPPER__) {
 	initializeMMKVFlipper({ default: storage });
 }
 
-const reduxStorage: Storage = {
+const reduxMmkvStorage: Storage = {
     setItem: (key, value) => {
         console.log('reduxStorage: setItem')
         storage.set(key, value)
@@ -30,4 +30,4 @@ const reduxStorage: Storage = {
     },
 }
 
-export { reduxStorage as storage };
+export default reduxMmkvStorage;
