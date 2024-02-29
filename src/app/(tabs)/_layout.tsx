@@ -6,7 +6,7 @@ import { Colors } from '@/constants';
 
 export const unstable_settings = {
   // Ensure that reloading on `/` keeps a back button present.
-  initialRouteName: WALLET_SCREEN,
+  initialRouteName: ACCOUNT_SCREEN,
 };
 
 export default function TabsLayout() {

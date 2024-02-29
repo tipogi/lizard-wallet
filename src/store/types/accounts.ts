@@ -1,3 +1,5 @@
+import { TSlideEdges } from "../selectors/account"
+
 export type TAccountsState = {
     selectedAccount: number | undefined,
     mainnet: TAtomicAccountState[],
@@ -12,4 +14,9 @@ export type TAtomicAccountState = {
     colors: string[],
     default: boolean,
     policy?: boolean
+}
+
+// Create a type guard to verify our object is AtomicTypeState
+export const isAtomicAccount = (account: TSlideEdges | TAtomicAccountState): account is TAtomicAccountState => {
+    return (account as TAtomicAccountState).descriptor !== undefined
 }

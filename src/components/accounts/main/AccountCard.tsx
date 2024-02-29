@@ -1,26 +1,19 @@
 import { GrapeColors } from "@/constants";
 import { addDotsToValue } from "@/data/convertions";
+import { TAtomicAccountState } from "@/store/types/accounts";
 import { cardStyle, genericCardStyle } from "@/styles/accounts";
 import { LinearGradient } from "expo-linear-gradient";
 import { Animated, Dimensions, Text, View } from "react-native";
+
 const { height, width } = Dimensions.get('window');
 
 const ITEM_SIZE = width * 0.9;
 const ITEM_HEIGHT = height * 0.2;
 const SPACING = 10;
 
-type Account = {
-    name: string,
-    color: GrapeColors,
-    balance: number,
-    fingerprint: string,
-    derivationPath: string,
-    policy: boolean
-}
-
 interface AccountCardProps {
     index: number,
-    item: Account,
+    item: TAtomicAccountState,
     scrollX: Animated.Value
 }
 
@@ -57,19 +50,6 @@ const AccountCard = ({ index, item, scrollX }: AccountCardProps) => {
             </LinearGradient>
         </View>
     )
-
-    // return (
-    //     <View style={{ width: ITEM_SIZE, height: ITEM_HEIGHT + 20 }}>
-    //         <Animated.View style={[genericCardStyle(SPACING, ITEM_HEIGHT, translateY).container, cardStyle.container]}>
-    //             <Text style={cardStyle.name}>
-    //                 {item.name}
-    //             </Text>
-    //             <Text style={cardStyle.balance}>
-    //                 {`${addDotsToValue(item.balance)} sat`}
-    //             </Text>
-    //         </Animated.View>
-    //     </View>
-    // )
 }
 
 export default AccountCard;

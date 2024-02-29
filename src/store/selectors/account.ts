@@ -1,12 +1,13 @@
 import { createSelector } from "@reduxjs/toolkit";
 import { RootState } from "../config/store";
-import { TAccountsState } from "../types/accounts";
+import { TAccountsState, TAtomicAccountState } from "../types/accounts";
 
-// We use first and last elements for the slide effect
-const accounts = [
-    { fingerprint: "spacer-start" },
-    { fingerprint: "spacer-end" }
-]
+// Animated carousel edges. FlatList element
+export type TSlideEdges = {
+    fingerprint: string
+}
+
+export type TAccountCarouselElements = (TSlideEdges | TAtomicAccountState)[];
 
 export const accountState = (state: RootState): TAccountsState => {
 	return state.accounts;
@@ -15,22 +16,26 @@ export const accountState = (state: RootState): TAccountsState => {
 export const accountsSelector = createSelector(
 	accountState,
     // TODO: the network type has to be generic depending the selected network
-	(account) => {
-        console.log('Account List selector: ');
-        const accountList = account.mainnet;
-        console.log(accountList);
-        if (accountList.length != 0) {
-            return [
-                accounts[0],
-                ...accountList,
-                accounts[1]
-            ]
-        }
-        return accounts;
-    }
+	(account): TAtomicAccountState[] => account.mainnet
 );
 
 export const accountAmountSelector = createSelector(
     accountState,
     (account) => account.mainnet.length
 )
+
+
+type Person = {
+    name: string;
+    age: number;
+  }
+  
+  type Animal = {
+    name: string;
+  
+    species: string;
+  }
+
+  function isPerson(obj: Person | Animal): obj is Person {
+    return (obj as Person).age !== undefined;
+  }
