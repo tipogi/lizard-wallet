@@ -5,15 +5,16 @@ import AccountCardList from "./AccountCardList";
 import AccountDetail from "./AccountDetail";
 import { useState } from "react";
 import { useAppSelector } from "@/hooks/store";
-import { accountsSelector } from "@/store/selectors/account";
+import { accountIndexSelector, accountsSelector } from "@/store/selectors/account";
 import { TAtomicAccountState } from "@/store/types/accounts";
 import { cardDetailsContent } from "@/data/entities/accounts/card";
 
 const AccountComponent = () => {
     // TODO: Hard coded index. That one has to come from the state
-    const [index, setIndex] = useState(0);
+    //const [index, setIndex] = useState(0);
 
     const accounts = useAppSelector(accountsSelector);
+    const accountIndex = useAppSelector(accountIndexSelector);
 
     const renderAccountDetail = (account: TAtomicAccountState) => {
         return (
@@ -38,12 +39,11 @@ const AccountComponent = () => {
             <AccountsHeader />
             <AccountCardList
                 accounts={accounts}
-                index={index}
-                setIndex={setIndex}
+                index={accountIndex}
             />
             <View style={accountStyle.main}>
                 {
-                    renderAccountDetail(accounts[index])
+                    renderAccountDetail(accounts[accountIndex])
                 }
             </View>
         </View>

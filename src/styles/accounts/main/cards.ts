@@ -32,13 +32,13 @@ export const cardStyle = StyleSheet.create({
     },
 })
 
-export const genericCardStyle = (SPACING: number, ITEM_HEIGHT: number, translateY: Animated.AnimatedInterpolation<string | number>) => StyleSheet.create({
+export const genericCardStyle = (SPACING: number, ITEM_HEIGHT: number) => StyleSheet.create({
     container: {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
         marginTop: 10,
-        marginHorizontal: SPACING,
+        marginHorizontal: SPACING ,
         padding: SPACING * 2,
         borderRadius: 10,
         height: ITEM_HEIGHT

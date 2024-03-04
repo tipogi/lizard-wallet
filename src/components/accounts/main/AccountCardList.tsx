@@ -1,7 +1,6 @@
-import { GrapeColors } from "@/constants";
 import { cardListStyle, indexStyle, indexStyleGeneric } from "@/styles/accounts";
-import { useRef, useState } from "react";
-import { Animated, Dimensions, Text, View } from "react-native";
+import { useEffect, useRef } from "react";
+import { Animated, Dimensions,TouchableOpacity, View } from "react-native";
 import AccountCard from "./AccountCard";
 import useAppDispatch from "@/store/hooks/useAppDispatch";
 import { updateSelectedAccount } from '../../../store/slices/accounts';
@@ -25,41 +24,49 @@ const SLIDER_EDGES: TSlideEdges[] = [
 interface AccountCardListProps {
     accounts: TAtomicAccountState[],
     index: number,
-    setIndex: React.Dispatch<React.SetStateAction<number>>
 }
 
-const AccountCardList = ({ accounts, index, setIndex }: AccountCardListProps) => {
+const AccountCardList = ({ accounts, index }: AccountCardListProps) => {
 
     const dispatch = useAppDispatch();
     const accountsNumber = useAppSelector(accountAmountSelector);
 
-    const accountWithEdges: TAccountCarouselElements = [
+    const accountsWithEdges: TAccountCarouselElements = [
         SLIDER_EDGES[0],
         ...accounts,
         SLIDER_EDGES[1]
     ];
 
     const scrollX = useRef(new Animated.Value(0)).current;
+    const flatListRef = useRef<Animated.FlatList>(null);
+
+    useEffect(() => {
+        flatListRef.current?.scrollToIndex({
+            animated: true,
+            index
+        })
+    }, [index])
 
     const renderAccountIndexDots = (selectedIndex: number) => {
         return times(accountsNumber, (index) => {
             return (
-                <View
-                    key={`dot-${index}`}
-                    style={[indexStyle.element, indexStyleGeneric(index, selectedIndex).focus]}
-                />
+                <TouchableOpacity 
+                    onPress={() => dispatch(updateSelectedAccount(index))}
+                    key={`account_list_dot_${index}`}
+                >
+                    <View
+                        key={`dot-${index}`}
+                        style={[indexStyle.element, indexStyleGeneric(index, selectedIndex).focus]}
+                    />
+                </TouchableOpacity>
             )
         })
     }
 
-    const renderAccountCards = (item: TSlideEdges | TAtomicAccountState, slider_index: number) => {
+    const renderAccountCards = (item: TSlideEdges | TAtomicAccountState) => {
         if (isAtomicAccount(item)) {
             return (
-                <AccountCard
-                    item={item}
-                    index={slider_index}
-                    scrollX={scrollX}
-                />
+                <AccountCard item={item} ITEM_SIZE={ITEM_SIZE}/>
             )
         }
         // These elements are the edges of the carousel
@@ -69,21 +76,38 @@ const AccountCardList = ({ accounts, index, setIndex }: AccountCardListProps) =>
     return (
         <View style={cardListStyle.container}>
             <Animated.FlatList
-                style={cardListStyle.list}
-                showsHorizontalScrollIndicator={false}
-                data={accountWithEdges}
+                initialScrollIndex={index}
+                data={accountsWithEdges}
                 keyExtractor={(item: TAtomicAccountState | TSlideEdges) => item.fingerprint}
+                ref={flatListRef}
+                style={cardListStyle.list}
                 horizontal
-                contentContainerStyle={{
-                    alignItems: "center"
-                }}
+                showsHorizontalScrollIndicator={false}
                 snapToInterval={ITEM_SIZE}
                 decelerationRate={0}
                 bounces={false}
+                contentContainerStyle={{ alignItems: "center" }}
+                scrollEventThrottle={16}
+                renderItem={({ item }) => renderAccountCards(item)}
                 onScroll={Animated.event(
                     [{ nativeEvent: { contentOffset: { x: scrollX } } }],
                     { useNativeDriver: true }
                 )}
+                getItemLayout={(data, index) => {
+                    return {length: ITEM_SIZE, offset: ITEM_SIZE * index, index}
+                }}
+                onScrollToIndexFailed={({index, highestMeasuredFrameIndex}) => {
+                    flatListRef.current?.scrollToOffset({
+                        offset: index * 1000, // Overestimate offset
+                        animated: true,
+                     });
+                     const wait = new Promise((resolve) => setTimeout(resolve, 500));
+                     wait.then(() => {
+                        flatListRef.current?.scrollToIndex({
+                            index, animated: true
+                        });
+                     });
+                }}
                 onMomentumScrollEnd={async (ev) => {
                     // Calculate from the index from the list width (x)
                     // The list content, will start in index=1 and will finish length -1 
@@ -92,7 +116,7 @@ const AccountCardList = ({ accounts, index, setIndex }: AccountCardListProps) =>
                     const newIndex = Math.round(ev.nativeEvent.contentOffset.x / ITEM_SIZE);
                     // TODO: Clean up the if clause without outputs
                     if (newIndex !== index) {
-                        setIndex(newIndex);
+                        //setIndex(newIndex);
                         dispatch(updateSelectedAccount(newIndex))
                         const fingerprint = SecureStore.getItem(`fingerprint_${newIndex}`)
                         if (fingerprint) {
@@ -106,8 +130,6 @@ const AccountCardList = ({ accounts, index, setIndex }: AccountCardListProps) =>
 
                     }
                 }}
-                scrollEventThrottle={16}
-                renderItem={({ item, index: slider_index }) => renderAccountCards(item, slider_index)}
             />
             <View style={indexStyle.container}>
                 {renderAccountIndexDots(index)}

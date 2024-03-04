@@ -1,8 +1,9 @@
 # Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
 
-# TODO list
+# Local notes
 todo.list
 commit.md
+snippets.md
 
 # Native code directories
 ios

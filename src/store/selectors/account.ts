@@ -22,20 +22,9 @@ export const accountsSelector = createSelector(
 export const accountAmountSelector = createSelector(
     accountState,
     (account) => account.mainnet.length
-)
+);
 
-
-type Person = {
-    name: string;
-    age: number;
-  }
-  
-  type Animal = {
-    name: string;
-  
-    species: string;
-  }
-
-  function isPerson(obj: Person | Animal): obj is Person {
-    return (obj as Person).age !== undefined;
-  }
+export const accountIndexSelector = createSelector(
+    accountState,
+    (account) => account.selectedAccount || 0
+);

@@ -1,5 +1,5 @@
 import { Colors } from "@/constants";
-import { ADD_ACCOUNT, INDEX } from "@/constants/navigation";
+import { DELETE_ACCOUNT, IMPORT_ACCOUNT, INDEX } from "@/constants/navigation";
 import { Stack } from "expo-router";
 
 // export const unstable_settings = {
@@ -21,10 +21,10 @@ export default function AccountLayout() {
         }}
       />
       <Stack.Screen
-        name={ADD_ACCOUNT}
-        options={{
-          //animation: "simple_push"
-        }}
+        name={IMPORT_ACCOUNT}
+      />
+      <Stack.Screen
+        name={DELETE_ACCOUNT}
       />
     </Stack>
   );

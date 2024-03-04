@@ -2,7 +2,6 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { settingsInitialState } from '../templates/settings';
 
 
-
 export const settingsSlice = createSlice({
     name: 'settings',
     initialState: settingsInitialState,

@@ -1,11 +1,11 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-const AddAccount = () => {
+const DeleteAccount = () => {
     return (
         <View style={styles.container}>
             {/* <StatusBar style="auto" /> */}
-            <Text>Add account Screen</Text>
+            <Text>Delete account Screen</Text>
         </View>
     )
 }
@@ -19,4 +19,4 @@ const styles = StyleSheet.create({
     },
   });
 
-export default AddAccount;
+export default DeleteAccount;
