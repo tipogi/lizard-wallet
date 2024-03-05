@@ -8,8 +8,9 @@ export const TX_SCREEN = "transaction"
 
 export const SETTINGS_SCREEN = "settings"
 
-export const ACCOUNT_SCREEN = "accounts"
+export const ACCOUNT_SCREEN = "(accounts)"
 export const IMPORT_ACCOUNT = "import"
+export const EDIT_ACCOUNT = "edit"
 export const DELETE_ACCOUNT = "delete"
 
 export enum NAVIGATION {
@@ -19,6 +20,7 @@ export enum NAVIGATION {
     transaction = `/(tabs)/${WALLET_SCREEN}/${TX_SCREEN}`,
     settings = `/(tabs)/${SETTINGS_SCREEN}`,
     account = `/(tabs)/${ACCOUNT_SCREEN}/`,
-    import_account = `/(tabs)/${ACCOUNT_SCREEN}/${IMPORT_ACCOUNT}`,
-    delete_account = `/(tabs)/${ACCOUNT_SCREEN}/${DELETE_ACCOUNT}`
+    import = `/(tabs)/${ACCOUNT_SCREEN}/${IMPORT_ACCOUNT}`,
+    delete = `/(tabs)/${ACCOUNT_SCREEN}/${DELETE_ACCOUNT}`,
+    edit = `/(tabs)/${ACCOUNT_SCREEN}/${EDIT_ACCOUNT}`
 }

@@ -5,7 +5,8 @@ export const headerStyle = StyleSheet.create({
       //flex: 1,
       height: "5%",
       paddingVertical: 10,
-      paddingHorizontal: 15
+      paddingHorizontal: 15,
+      zIndex: 5
     },
     actionBar: {
       flex:1,

@@ -3,15 +3,13 @@ import { View, StyleSheet } from "react-native";
 import AccountsHeader from "./Header";
 import AccountCardList from "./AccountCardList";
 import AccountDetail from "./AccountDetail";
-import { useState } from "react";
 import { useAppSelector } from "@/hooks/store";
 import { accountIndexSelector, accountsSelector } from "@/store/selectors/account";
 import { TAtomicAccountState } from "@/store/types/accounts";
 import { cardDetailsContent } from "@/data/entities/accounts/card";
+import { accountStyle } from "@/styles/accounts/main";
 
 const AccountComponent = () => {
-    // TODO: Hard coded index. That one has to come from the state
-    //const [index, setIndex] = useState(0);
 
     const accounts = useAppSelector(accountsSelector);
     const accountIndex = useAppSelector(accountIndexSelector);
@@ -51,28 +49,6 @@ const AccountComponent = () => {
 }
 
 export default AccountComponent;
-
-const accountStyle = StyleSheet.create({
-    container: {
-        display: "flex",
-        flex: 1,
-        backgroundColor: Colors.Green
-    },
-    main: {
-        backgroundColor: Colors.Background,
-        marginTop: "auto",
-        height: "80%",
-        display: "flex",
-        borderTopLeftRadius: 35,
-        borderTopRightRadius: 35,
-    },
-    content: {
-        display: "flex",
-        padding: 30,
-        paddingTop: 150,
-        gap: 30
-    }
-})
 
 
 

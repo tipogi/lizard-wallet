@@ -23,8 +23,4 @@ export function TagIcon(props: IconProps) {
     )
 }
 
-// const style = StyleSheet.create({
-//     rotate:  {
-//         transform: [{rotateX: '90deg'}]
-//     }
-// })
+//YesIcon: Note
