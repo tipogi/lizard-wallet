@@ -6,7 +6,7 @@ import { Colors } from '@/constants';
 
 export const unstable_settings = {
   // Ensure that reloading on `/` keeps a back button present.
-  initialRouteName: ACCOUNT_SCREEN,
+  initialRouteName: WALLET_SCREEN,
 };
 
 export default function TabsLayout() {
@@ -18,7 +18,7 @@ export default function TabsLayout() {
 
   return (
     <Tabs
-        initialRouteName={ACCOUNT_SCREEN}
+        initialRouteName={WALLET_SCREEN}
         screenOptions={{
           tabBarShowLabel: false,
           headerShown: false,

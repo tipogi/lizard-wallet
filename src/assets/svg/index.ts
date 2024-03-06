@@ -35,6 +35,8 @@ export { Sign } from './Sign';
 export { Import } from './Import';
 export { Rubbish } from './Rubbish';
 export { Dashboard } from './Dashboard';
+export { Back } from './Back';
+export { Clipboard } from './Clipboard';
 
 // Exported using SVG format not tsx. That was done because hot corner
 export { Settings } from './Settings';

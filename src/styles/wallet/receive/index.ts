@@ -3,10 +3,12 @@ import { APP_FONT, H3, H5 } from "@/constants/font";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
+    receiveContainer: {
+        display: 'flex',
+        justifyContent: "center"
+    },
     main: {
         backgroundColor: Colors.Background,
-        marginTop: "auto",
-        height: "85%",
         display: "flex",
         borderTopLeftRadius: 35,
         borderTopRightRadius: 35,
@@ -17,7 +19,7 @@ export const styles = StyleSheet.create({
         paddingRight: 25,
     },
     qr: {
-        marginTop: 30,
+        //marginTop: 10,
         marginBottom: 40,
         display: "flex",
         justifyContent: "center",
@@ -26,13 +28,18 @@ export const styles = StyleSheet.create({
     details: {
         fontFamily: APP_FONT,
         fontSize: H3,
-        color: Colors.Grey,
+        color: Colors.White,
         textAlign: "center"
     },
     derivationColor: {
-        color: Colors.WhiteSoft,
+        color: Colors.Grey,
         marginTop: 10,
         fontSize: H5
+    },
+    clipboard: {
+        display: "flex",
+        marginTop: 80,
+        alignItems: "center",
     },
     othersContainer: {
         paddingLeft: 30,
@@ -42,25 +49,6 @@ export const styles = StyleSheet.create({
     property: {
         display: "flex",
         flexDirection: "row"
-    },
-    clipboard: {
-        display: "flex",
-        marginTop: 80,
-        alignItems: "center",
-    },
-    clipBtn: {
-        backgroundColor: Colors.Yellow,
-        width: "70%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        borderRadius: 5
-    },
-    clipTxt: {
-        color: Colors.Background,
-        fontFamily: APP_FONT,
-        fontSize: H3,
-        padding: 10
     },
     font: {
         fontFamily: APP_FONT,

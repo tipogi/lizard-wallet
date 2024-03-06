@@ -1,5 +1,5 @@
-import CustomModal from "@/components/global/elements/CustomModal";
 import { Grape } from "@/assets/svg";
+import { CustomModal } from "@/components/global/elements";
 import { Colors } from "@/constants";
 import { paletteColors } from "@/constants/colors";
 import { EN } from "@/constants/translations";
@@ -36,7 +36,7 @@ const ColorInput = () => {
                     }) }
                 </View>
             </CustomModal>
-            <Grape fontSize={22} color={Colors.Yellow} />
+            <Grape fontSize={22} color={Colors.Green} />
             <TouchableOpacity onPress={() => toggleModal(true)}>
                 <Text style={colorStyles.font}>{EN.wallet.receive.utxoColor}</Text>
             </TouchableOpacity>

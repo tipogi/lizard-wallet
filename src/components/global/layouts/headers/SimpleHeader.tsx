@@ -14,13 +14,13 @@ interface SimpleHeaderProps {
 export const SimpleHeader = ({ headline, icon: Icon, backAction, iconColor }: SimpleHeaderProps) => {
 
     const { container, navigation } = generalStyle;
-    
+
     return (
         <View style={container}>
             <View style={navigation}>
                 <Link href={backAction} asChild>
                     <TouchableOpacity >
-                        <Icon fontSize={30} color={iconColor}/>
+                        <Icon fontSize={17} color={iconColor} />
                     </TouchableOpacity>
                 </Link>
             </View>

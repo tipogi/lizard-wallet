@@ -60,7 +60,7 @@ export default function WalletLayout() {
       <Stack.Screen
         name={RECEIVE_SCREEN}
         options={{
-          statusBarColor: Colors.Yellow,
+          statusBarColor: Colors.Background,
           animation: "slide_from_bottom"
         }}
       />

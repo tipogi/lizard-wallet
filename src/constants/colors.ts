@@ -10,7 +10,8 @@ export enum Colors {
     YellowPlaceholder = "#f9e5be",
     Red = "#FF8E72",
     Grey = "#909090",
-    Black = "#4D4D4D",
+    SoftBlack = "#4D4D4D",
+    Black = "#000000",
     // Related accounts Card
     GreenSoft = "#15F5BA",
     GreySoft = "#BFC6CE"

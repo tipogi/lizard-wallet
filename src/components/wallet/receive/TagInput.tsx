@@ -1,5 +1,5 @@
-import CustomModal from "@/components/global/elements/CustomModal";
 import { TagIcon } from "@/assets/svg";
+import { CustomModal } from "@/components/global/elements";
 import { Colors } from "@/constants";
 import { EN } from "@/constants/translations";
 import { tagInputStyle } from "@/styles/wallet";
@@ -30,7 +30,7 @@ const TagInput = () => {
           />
         </View>
       </CustomModal>
-      <TagIcon fontSize={22} color={Colors.Yellow} />
+      <TagIcon fontSize={22} color={Colors.Green} />
       <TouchableOpacity onPress={() => toggleModal(true)}>
         <Text style={tagInputStyle.font}>{EN.wallet.receive.tag}</Text>
       </TouchableOpacity>
