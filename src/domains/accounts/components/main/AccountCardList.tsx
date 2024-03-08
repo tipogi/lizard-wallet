@@ -2,10 +2,9 @@ import { cardListStyle, indexStyle, indexStyleGeneric } from "@/domains/accounts
 import { useEffect, useRef } from "react";
 import { Animated, Dimensions,TouchableOpacity, View } from "react-native";
 import AccountCard from "./AccountCard";
-import useAppDispatch from "@/store/hooks/useAppDispatch";
 import { updateSelectedAccount } from '../../store/slices/accounts';
 import * as SecureStore from 'expo-secure-store';
-import { useAppSelector } from "@/store/hooks/store";
+import { useAppDispatch, useAppSelector } from "@/store/hooks/store";
 import { TAccountCarouselElements, TSlideEdges, accountAmountSelector } from "@/domains/accounts/store/selectors/account";
 import { times } from 'lodash';
 import { TAtomicAccountState, isAtomicAccount } from "@/domains/accounts/store/types/accounts";

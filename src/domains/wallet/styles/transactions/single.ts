@@ -3,6 +3,11 @@ import { APP_FONT_BOLD, H1, H2, H2_5, H3, H4, H4_2, H5 } from "@/constants/font"
 import { StyleSheet } from "react-native";
 
 export const singleTxStyle = StyleSheet.create({
+  bodyContainer: {
+    display: "flex",
+    flex: 6,
+    flexDirection: "column"
+  },
   font: {
     fontFamily: APP_FONT,
     fontSize: H4
@@ -30,13 +35,10 @@ export const singleTxStyle = StyleSheet.create({
     marginVertical: 20,
     gap: 25
   },
-  row: {
+  buttonContainer: {
     display: "flex",
-    flexDirection: "row"
-  },
-  center: {
-    justifyContent: "center",
-    marginTop: 20
+    alignItems: "center",
+    flex: 1,
   },
   clipBtn: {
     backgroundColor: Colors.Yellow,
@@ -71,7 +73,6 @@ export const summaryStyle = StyleSheet.create({
     display: "flex",
     marginHorizontal: 35,
     marginVertical: 15
-
   },
   row: {
     display: "flex",
@@ -79,7 +80,7 @@ export const summaryStyle = StyleSheet.create({
     justifyContent: "space-between",
     marginBottom: 30
   },
-  primaryContainer: { 
+  primaryContainer: {
     display: "flex",
     flexDirection: "row",
     alignItems: "flex-end",

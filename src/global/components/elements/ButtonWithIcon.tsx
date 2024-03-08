@@ -12,11 +12,11 @@ interface ButtonProps {
 
 export const ButtonWithIcon = ({ tag, Icon, size, background }: ButtonProps) => {
     return (
-        <TouchableOpacity style={[buttonStyle.container, buttonStyle.shadow]}>
-            <View style={[buttonStyle.iconContainer, buttonColors(background).iconBackground]}>
+        <View style={[buttonStyle.container, buttonStyle.shadow]}>
+            <TouchableOpacity style={[buttonStyle.iconContainer, buttonColors(background).iconBackground]}>
                 <Icon fontSize={size} color={Colors.Background} />
-            </View>
+            </TouchableOpacity>
             <Text style={buttonStyle.label}>{tag}</Text>
-        </TouchableOpacity>
+        </View>
     )
 }

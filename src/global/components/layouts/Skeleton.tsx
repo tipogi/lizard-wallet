@@ -59,9 +59,7 @@ export const Skeleton = ({ children, headerLabel, backAction, actionIcon }: Skel
                 { headerLabel && renderHeaderLabel() }
                 { renderHeaderAction() }
             </View>
-            <View style={skeletonStyle.bodyContainer}>
-                {children}
-            </View>
+            {children}
         </>
     );
 }

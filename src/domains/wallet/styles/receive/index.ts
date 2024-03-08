@@ -14,14 +14,17 @@ export const styles = StyleSheet.create({
         borderTopLeftRadius: 35,
         borderTopRightRadius: 35,
     },
-    container: {
+    bodyContainer: {
         display: "flex",
+        flex: 1,
         paddingLeft: 20,
         paddingRight: 25,
+        alignContent: "space-between"
     },
     qr: {
-        marginBottom: 40,
         display: "flex",
+        flex: 1,
+        //marginBottom: 40,
         justifyContent: "center",
         alignItems: "center"
     },
@@ -36,14 +39,10 @@ export const styles = StyleSheet.create({
         marginTop: 10,
         fontSize: H5
     },
-    clipboard: {
+    detailsContainer: {
         display: "flex",
-        marginTop: 80,
-        alignItems: "center",
-    },
-    othersContainer: {
-        paddingLeft: 30,
-        paddingRight: 30,
+        flex: 1,
+        paddingHorizontal: 30,
         gap: 20
     },
     property: {
@@ -55,5 +54,10 @@ export const styles = StyleSheet.create({
         fontSize: H5,
         color: Colors.Grey,
         marginLeft: 15
-    }
+    },
+    buttonContainer: {
+        display: "flex",
+        alignItems: "center",
+        marginBottom: 40
+    },
 });

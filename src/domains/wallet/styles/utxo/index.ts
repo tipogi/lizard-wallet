@@ -65,9 +65,9 @@ export const utxoCardStyle = StyleSheet.create({
 
 export const listStyles = StyleSheet.create({
     main: {
-      backgroundColor: Colors.Background,
-      marginTop: "auto",
-      display: "flex",
-      paddingTop: 10
+        backgroundColor: Colors.Background,
+        display: "flex",
+        marginVertical: 20,
+        flex: 1
     }
   });

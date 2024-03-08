@@ -15,13 +15,13 @@ const Receive = () => {
             <Skeleton
                 backAction={NAVIGATION.wallet}
             >
-                <View style={styles.container}>
+                <View style={styles.bodyContainer}>
                     <View style={styles.qr}>
                         <Qr fontSize={200} color={Colors.Green} />
                         <Text style={styles.details}>tb1qe7un5dvqd26yp7mu0h35a0c9d05ylg2h8ealaq</Text>
                         <Text style={[styles.details, styles.derivationColor]}>m/84'/1'/0'/0/5</Text>
                     </View>
-                    <View style={styles.othersContainer}>
+                    <View style={styles.detailsContainer}>
                         <TagInput />
                         <View style={styles.property}>
                             <Tick fontSize={22} color={Colors.Green} />
@@ -32,14 +32,14 @@ const Receive = () => {
                             <Custom fontSize={22} color={Colors.Green} />
                             <Text style={styles.font}>{EN.wallet.receive.customise}</Text>
                         </View>
-                        <View style={styles.clipboard}>
-                            <ButtonWithIcon
-                                tag={EN.wallet.receive.clipboard}
-                                Icon={Clipboard}
-                                size={20}
-                                background={Colors.Green}
-                            />
-                        </View>
+                    </View>
+                    <View style={styles.buttonContainer}>
+                        <ButtonWithIcon
+                            tag={EN.wallet.receive.clipboard}
+                            Icon={Clipboard}
+                            size={20}
+                            background={Colors.Green}
+                        />
                     </View>
                 </View>
             </Skeleton>

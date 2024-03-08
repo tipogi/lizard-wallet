@@ -13,7 +13,6 @@ export const buttonStyle = StyleSheet.create({
         borderRadius: 5
     },
     iconContainer: {
-        backgroundColor: Colors.Green,
         padding: 10,
         borderRadius: 5,
         borderBottomRightRadius: 0,
