@@ -14,7 +14,6 @@ export default function ReceiveUTXO() {
 
 const styles = StyleSheet.create({
   container: {
-    //display: "flex",
     flex: 1,
     backgroundColor: Colors.Background,
   },

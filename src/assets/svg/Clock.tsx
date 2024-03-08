@@ -15,5 +15,3 @@ export function Clock(props: IconProps) {
         </Svg>
     )
 }
-
-  //width="0.86em" height="1em"

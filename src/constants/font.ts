@@ -7,6 +7,7 @@ export const H2 = 45;
 export const H2_5 = 35;
 export const H3 = 28;
 export const H4 = 24;
+export const H4_2 = 22;
 export const H5 = 20;
 
 // --> Karintina font config <--

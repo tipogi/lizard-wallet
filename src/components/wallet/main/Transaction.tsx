@@ -19,7 +19,7 @@ export interface TransactionProps {
 
 const Transaction = ({ tx_id, tag, balance, type, time, conf }: TransactionProps) => {
 
-    const color = transactionColor(type, conf);
+    const { color } = transactionColor(type, conf);
 
     const renderTxTypeIcon = (type: TxType) => {
         return type === TxType.OUT ?

@@ -1,13 +1,39 @@
 import { Colors } from "@/constants";
-import { DimensionValue, StyleSheet } from "react-native";
+import { APP_FONT, H4 } from "@/constants/font";
+import { StyleSheet } from "react-native";
 
-export const dynamicSkeletonStyle = (contentLength: DimensionValue) => StyleSheet.create({
-    main: {
-        backgroundColor: Colors.Background,
-        marginTop: "auto",
-        height: contentLength,
+export const skeletonStyle = StyleSheet.create({
+    headerContainer: {
         display: "flex",
-        borderTopLeftRadius: 35,
-        borderTopRightRadius: 35,
-    }
-});
+        flexDirection: "row",
+        justifyContent: "center",
+        alignItems: "center",
+        marginHorizontal: 35,
+        marginVertical: 15
+    },
+    bodyContainer: {
+        marginTop: "auto",
+        display: "flex",
+        flex: 1
+    },
+    headerBackIcon: {
+        display: "flex",
+        flex: 2,
+        alignItems:"flex-start",
+        justifyContent: "center",
+    },
+    headerLabelContainer: {
+        display: "flex",
+        flex: 6,
+        alignItems: "center"
+    },
+    headerLabel: {
+        fontFamily: APP_FONT,
+        fontSize: H4
+    },
+    headerActions: {
+        display: "flex",
+        flex: 2,
+        alignItems: "flex-end",
+    },
+})

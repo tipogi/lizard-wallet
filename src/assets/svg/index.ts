@@ -18,6 +18,7 @@ export { TagIcon } from './Tag';
 export { Grape } from './Grape';
 export { In } from './In';
 export { Out } from './Out';
+export { Arrow } from './Arrow';
 export { Qr } from './Qr';
 export { Tick } from './Tick';
 export { Custom } from './Custom';
@@ -37,6 +38,8 @@ export { Rubbish } from './Rubbish';
 export { Dashboard } from './Dashboard';
 export { Back } from './Back';
 export { Clipboard } from './Clipboard';
+export { Pool } from './Pool';
+export { Search } from './Search';
 
 // Exported using SVG format not tsx. That was done because hot corner
 export { Settings } from './Settings';

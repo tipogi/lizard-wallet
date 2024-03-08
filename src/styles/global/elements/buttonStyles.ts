@@ -30,3 +30,9 @@ export const buttonStyle = StyleSheet.create({
         elevation: 15,
     }
 });
+
+export const buttonColors = (color: Colors) => StyleSheet.create({
+    iconBackground: {
+        backgroundColor: color
+    }
+})

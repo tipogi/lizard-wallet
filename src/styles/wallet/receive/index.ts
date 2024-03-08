@@ -5,7 +5,8 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     receiveContainer: {
         display: 'flex',
-        justifyContent: "center"
+        justifyContent: "center",
+        flex: 1
     },
     main: {
         backgroundColor: Colors.Background,
@@ -19,7 +20,6 @@ export const styles = StyleSheet.create({
         paddingRight: 25,
     },
     qr: {
-        //marginTop: 10,
         marginBottom: 40,
         display: "flex",
         justifyContent: "center",

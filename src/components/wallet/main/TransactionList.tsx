@@ -9,7 +9,7 @@ const data: TransactionProps[] = [
         balance: 32913,
         type: TxType.OUT,
         time: '05/12/23 18:18',
-        conf: 3
+        conf: 2
     },
     {
         tx_id: '3ac68afcc60548d3a4f8fbd91aa97f63',

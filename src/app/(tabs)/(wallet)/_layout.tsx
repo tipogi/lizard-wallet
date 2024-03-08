@@ -74,7 +74,7 @@ export default function WalletLayout() {
       <Stack.Screen
         name={UTXO_SCREEN}
         options={{
-          statusBarColor: Colors.Yellow
+          statusBarColor: Colors.Background
           //animation: "flip"
         }}
       />

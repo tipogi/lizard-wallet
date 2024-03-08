@@ -9,12 +9,14 @@ export const detailStyle = StyleSheet.create({
       alignItems: "center"
     },
     icon: {
-      paddingRight: 20,
+      paddingRight: 5,
       flex: 2
     },
     detailText: {
       flex: 8,
-      fontSize: H4
+      fontSize: H4,
+      color: Colors.SecondaryBackground,
+      fontFamily: APP_FONT
     },
     detailValue: {
       flex: 12,
@@ -26,7 +28,7 @@ export const detailStyle = StyleSheet.create({
 
 export const dynamicColor = (background: Colors, active: boolean) => StyleSheet.create({
     font: {
-        color: active ? background : Colors.Grey,
+        color: active ? background : Colors.White,
         fontFamily: APP_FONT,
         fontSize: H4
     }

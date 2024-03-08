@@ -1,10 +1,10 @@
-import { SimpleHeader } from '@/components/global/layouts';
-import { Close } from '@/assets/svg';
+import { Skeleton } from '@/components/global/layouts';
 import UtxoCard, { UtxoProps } from '@/components/wallet/utxolist/UtxoCard';
 import { Colors, GrapeColors } from '@/constants';
 import { NAVIGATION } from '@navigation';
 import { EN } from '@translations';
 import { FlatList, StyleSheet, View } from 'react-native';
+import { singleTxStyle } from '@/styles/wallet';
 
 const data: UtxoProps[] = [
   {
@@ -50,21 +50,18 @@ const data: UtxoProps[] = [
 ]
 
 
-
-
 const UTXOList = () => {
   return (
-    <>
-      <SimpleHeader
-        icon={Close}
-        headline={EN.wallet.utxos.headline}
+    <View style={singleTxStyle.container}>
+      <Skeleton
         backAction={NAVIGATION.wallet}
-        iconColor={Colors.Background}
-      />
-      <View style={styles.main}>
-        <FlatList
-          data={data}
-          renderItem={({ item }) => {
+        headerLabel={EN.wallet.utxos.headline}
+      >
+        <View style={styles.main}>
+          <FlatList
+            data={data}
+            showsVerticalScrollIndicator={false}
+            renderItem={({ item }) => {
               return ([
                 <UtxoCard
                   key={`utxo-card-${item.id}`}
@@ -79,11 +76,11 @@ const UTXOList = () => {
                   {...item}
                 />
               ])
-          }}
-          showsVerticalScrollIndicator={false}
-        />
-      </View>
-    </>
+            }}
+          />
+        </View>
+      </Skeleton>
+    </View>
   );
 }
 
@@ -91,24 +88,9 @@ const styles = StyleSheet.create({
   main: {
     backgroundColor: Colors.Background,
     marginTop: "auto",
-    height: "85%",
     display: "flex",
-    borderTopLeftRadius: 35,
-    borderTopRightRadius: 35,
-    paddingTop: 30
+    paddingTop: 10
   }
 });
 
 export default UTXOList;
-
-
-{/* <FlatList
-          data={data}
-          keyExtractor={item => item.id}
-          renderItem={(element) => {
-            console.log(element)
-            return (
-              <View><Text>{ element.item.title}</Text></View>
-            )
-          }}
-        /> */}

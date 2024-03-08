@@ -24,7 +24,7 @@ export const EN = {
             single: {
                 in: "received",
                 out: "send",
-                conf: "confirmations",
+                conf: "conf",
                 notConf: "unconfirmed",
                 view: "view on explorer"
             }

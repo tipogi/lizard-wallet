@@ -3,4 +3,7 @@ export enum TxType {
     OUT = 'OUT'
 }
 
-export const UNCONFIRMED_TX = 2;
+export const enum TTxState {
+    UNCONFIRMED_TX = 2,
+    MEMPOOL_TX = 0
+}

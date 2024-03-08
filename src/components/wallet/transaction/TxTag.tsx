@@ -1,7 +1,7 @@
-import { Format, Share, TagIcon } from "@/assets/svg";
+import { TagIcon } from "@/assets/svg";
 import { Colors } from "@/constants";
 import { APP_FONT, H4 } from "@/constants/font";
-import { detailStyle, dynamicBackground } from "@/styles/wallet";
+import { detailStyle } from "@/styles/wallet";
 import { StyleSheet, Text, View } from "react-native";
 
 interface TxTagProps {
@@ -17,7 +17,7 @@ const TxTag = ({ tag, background }: TxTagProps) => {
                 <TagIcon fontSize={20} color={background} />
             </View>
             <Text style={[tagStyle.detailText, tagStyle.color]}>
-                After visit my big friends of komodo, time to buy the ticket to come back   🛫
+                After visit my big friends of komodo, time to buy return ticket
             </Text>
         </View>
     )
@@ -33,6 +33,6 @@ const tagStyle = StyleSheet.create({
     color: {
         fontSize: H4,
         fontFamily: APP_FONT,
-        color: Colors.Grey
+        color: Colors.White
     }
 });

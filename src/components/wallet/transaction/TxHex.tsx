@@ -1,7 +1,7 @@
 import { Format, Share } from "@/assets/svg";
 import { Colors } from "@/constants";
 import { H4 } from "@/constants/font";
-import { detailStyle, dynamicBackground } from "@/styles/wallet";
+import { detailStyle, genericColor } from "@/styles/wallet";
 import { StyleSheet, Text, View } from "react-native";
 
 interface TxHexProps {
@@ -16,7 +16,7 @@ const TxHex = ({ link, background }: TxHexProps) => {
             <View style={detailStyle.icon}>
                 <Format fontSize={20} color={background}/>
             </View>
-            <Text style={[ hexStyle.detailText, dynamicBackground(background).txColor ]}>transaction hexadecimal</Text>
+            <Text style={[ hexStyle.detailText, genericColor(background).txColor ]}>transaction hexadecimal</Text>
             <Share fontSize={20} color={background}/>
         </View>
     )

@@ -1,5 +1,6 @@
 export enum Colors {
     Background = '#222F3A',
+    SecondaryBackground = "#425463",
     Navigation = '#2E3B46',
     BackgroundBlur = 'rgba(0, 0, 0, .9)',
     White = "#ffffff",
@@ -14,7 +15,9 @@ export enum Colors {
     Black = "#000000",
     // Related accounts Card
     GreenSoft = "#15F5BA",
-    GreySoft = "#BFC6CE"
+    GreySoft = "#BFC6CE",
+    // Related with single TX icon shadow
+    BlackShadow = "rgba(25, 25, 25, .6)"
 }
 
 export enum GrapeColors {
@@ -28,7 +31,7 @@ export enum GrapeColors {
     Red = "#FF0060"
 }
 
-export type txColors = Colors.Green | Colors.Red | Colors.Yellow;
+export type TTxColors = Colors.Green | Colors.Red | Colors.Yellow;
 
 export const paletteColors: GrapeColors[] = [
     GrapeColors.Pink,

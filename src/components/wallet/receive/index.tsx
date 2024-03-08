@@ -1,5 +1,5 @@
-import { SimpleHeader } from "@/components/global/layouts"
-import { Back, Custom, Qr, Tick } from "@/assets/svg";
+import { Skeleton } from "@/components/global/layouts"
+import { Back, Clipboard, Custom, Qr, Tick } from "@/assets/svg";
 import { Colors } from "@/constants"
 import { NAVIGATION } from "@/constants/navigation"
 import { EN } from "@/constants/translations"
@@ -12,13 +12,9 @@ import { ButtonWithIcon } from "@/components/global/elements";
 const Receive = () => {
     return (
         <View style={styles.receiveContainer}>
-            <SimpleHeader
-                icon={Back}
-                headline={EN.wallet.receive.headline}
+            <Skeleton
                 backAction={NAVIGATION.wallet}
-                iconColor={Colors.Grey}
-            />
-            <View style={styles.main}>
+            >
                 <View style={styles.container}>
                     <View style={styles.qr}>
                         <Qr fontSize={200} color={Colors.Green} />
@@ -39,11 +35,14 @@ const Receive = () => {
                         <View style={styles.clipboard}>
                             <ButtonWithIcon
                                 tag={EN.wallet.receive.clipboard}
+                                Icon={Clipboard}
+                                size={20}
+                                background={Colors.Green}
                             />
                         </View>
                     </View>
                 </View>
-            </View>
+            </Skeleton>
         </View>
     )
 }
