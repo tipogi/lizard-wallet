@@ -7,7 +7,9 @@ export const utxoCardStyle = StyleSheet.create({
         display: 'flex',
         flexDirection: 'row',
         marginTop: 17,
-        marginBottom: 17,
+        paddingBottom: 17,
+        borderBottomColor: "#273643",
+        borderBottomWidth: 1
     },
     indexContainer: {
         flex: 2,
@@ -24,8 +26,8 @@ export const utxoCardStyle = StyleSheet.create({
     },
     address: {
         fontSize: H4,
-        color: Colors.Grey,
-        fontFamily: APP_FONT_BOLD,
+        color: Colors.White,
+        fontFamily: APP_FONT,
     },
     infoContainer: {
         flexDirection: 'row',
@@ -50,11 +52,11 @@ export const utxoCardStyle = StyleSheet.create({
         display: 'flex',
         flex: 2,
         alignItems: 'center',
-        justifyContent: 'center',
-        marginBottom: 2
+        justifyContent: 'flex-end',
+        marginBottom: 5
     },
     balance: {
-        color: Colors.Yellow,
+        color: Colors.Green,
         fontFamily: APP_FONT_BOLD,
         fontSize: H4
     },

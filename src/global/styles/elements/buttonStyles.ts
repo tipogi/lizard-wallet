@@ -1,5 +1,5 @@
 import { APP_FONT, Colors } from "@/constants";
-import { H3 } from "@/constants/font";
+import { H3, H4 } from "@/constants/font";
 import { StyleSheet } from "react-native";
 
 export const buttonStyle = StyleSheet.create({
@@ -10,18 +10,18 @@ export const buttonStyle = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        borderRadius: 5
+        borderRadius: 10
     },
     iconContainer: {
         padding: 10,
-        borderRadius: 5,
-        borderBottomRightRadius: 0,
-        borderTopRightRadius: 0
+        borderRadius: 10,
+        //borderBottomRightRadius: 0,
+        //borderTopRightRadius: 0
     },
     label: {
         color: Colors.Background,
         fontFamily: APP_FONT,
-        fontSize: H3,
+        fontSize: H4,
         paddingHorizontal: 15
     },
     shadow: {

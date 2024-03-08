@@ -40,6 +40,8 @@ export { Back } from './Back';
 export { Clipboard } from './Clipboard';
 export { Pool } from './Pool';
 export { Search } from './Search';
+export { Filter } from './Filter';
+export { Calendar } from './Calendar';
 
 // Exported using SVG format not tsx. That was done because hot corner
 export { Settings } from './Settings';

@@ -1,5 +1,5 @@
 import { Skeleton } from "@/global/components/layouts";
-import { BarChart, Search, TimeLock, Verified, Version } from "@/assets/svg";
+import { BarChart, Calendar, Search, TimeLock, Verified, Version } from "@/assets/svg";
 import { NAVIGATION } from "@/constants/navigation";
 import { transactionColor } from "@/data/entities/transactions";
 import { singleTxStyle } from "@/domains/wallet/styles";
@@ -28,6 +28,15 @@ const Transaction = () => {
                         hex="c76844da3f2e9062266f021ca07dbec842b17dd609076b82dc9e4bde813a1c1e"
                     />
                     <View style={singleTxStyle.detailsContainer}>
+                    <TxDetail
+                            icon={Calendar}
+                            iconSize={14}
+                            background={background}
+                            text="date"
+                            value={[
+                                { data: "01/11/23 18:18", active: false },
+                            ]}
+                        />
                         <TxDetail
                             icon={BarChart}
                             iconSize={20}
@@ -39,7 +48,7 @@ const Transaction = () => {
                         />
                         <TxDetail
                             icon={Verified}
-                            iconSize={18}
+                            iconSize={15}
                             background={background}
                             text="features"
                             value={[
@@ -59,7 +68,7 @@ const Transaction = () => {
                         />
                         <TxDetail
                             icon={TimeLock}
-                            iconSize={20}
+                            iconSize={18}
                             background={background}
                             text="locktime"
                             value={[

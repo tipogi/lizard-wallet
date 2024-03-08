@@ -28,16 +28,16 @@ export const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center"
     },
-    details: {
-        fontFamily: APP_FONT,
-        fontSize: H3,
-        color: Colors.White,
-        textAlign: "center"
+    addressContainer: {
+        display: 'flex',
+        flexDirection: "row"
     },
     derivationColor: {
-        color: Colors.Grey,
+        fontFamily: APP_FONT,
+        color: Colors.AlmostWhite,
         marginTop: 10,
-        fontSize: H5
+        fontSize: H5,
+        textAlign: "center"
     },
     detailsContainer: {
         display: "flex",

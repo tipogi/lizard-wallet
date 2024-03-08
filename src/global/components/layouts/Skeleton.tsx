@@ -17,7 +17,7 @@ interface SkeletonProps {
     actionIcon?: THeaderAction,
     /*headerType: HeaderType,
     headline: string,
-    icon: React.ElementType<IconProps>*/
+    */
 }
 
 export const Skeleton = ({ children, headerLabel, backAction, actionIcon }: SkeletonProps) => {
@@ -45,7 +45,7 @@ export const Skeleton = ({ children, headerLabel, backAction, actionIcon }: Skel
             <View style={skeletonStyle.headerActions}>
                 { actionIcon && 
                     <TouchableOpacity>
-                        <Back fontSize={17} color={Colors.Grey} />
+                        <actionIcon.icon fontSize={17} color={Colors.Grey} />
                     </TouchableOpacity>
                 }
             </View>

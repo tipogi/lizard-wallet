@@ -7,9 +7,13 @@ import { Text, View } from "react-native"
 import TagInput from "./TagInput";
 import ColorInput from "./ColorInput";
 import { styles } from "@/domains/wallet/styles";
-import { ButtonWithIcon } from "@/global/components/elements";
+import { Address, ButtonWithIcon } from "@/global/components/elements";
 
 const Receive = () => {
+
+    const renderAddressInChunks = (address: string) => {
+        
+    }
     return (
         <View style={styles.receiveContainer}>
             <Skeleton
@@ -18,8 +22,12 @@ const Receive = () => {
                 <View style={styles.bodyContainer}>
                     <View style={styles.qr}>
                         <Qr fontSize={200} color={Colors.Green} />
-                        <Text style={styles.details}>tb1qe7un5dvqd26yp7mu0h35a0c9d05ylg2h8ealaq</Text>
-                        <Text style={[styles.details, styles.derivationColor]}>m/84'/1'/0'/0/5</Text>
+                        <View style={styles.addressContainer}>
+                            <Address
+                                value="tb1qe7un5dvqd26yp7mu0h35a0c9d05ylg2h8ealaq"
+                            />
+                        </View>
+                        <Text style={styles.derivationColor}>m/84'/1'/0'/0/5</Text>
                     </View>
                     <View style={styles.detailsContainer}>
                         <TagInput />
