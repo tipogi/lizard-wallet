@@ -2,7 +2,7 @@ import { DimensionValue, Text, TouchableOpacity, View } from "react-native";
 import { Colors } from "@/constants";
 import { Back, IconProps } from "@/assets/svg";
 import { NAVIGATION } from "@/constants/navigation";
-import { skeletonStyle } from "@/domains/global";
+import { skeletonStyle } from "@/global";
 import { Link } from "expo-router";
 
 export type THeaderAction = {

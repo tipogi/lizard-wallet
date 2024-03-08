@@ -1,4 +1,4 @@
-import { Skeleton } from "@/domains/global/components/layouts"
+import { Skeleton } from "@/global/components/layouts"
 import { Clipboard, Custom, Qr, Tick } from "@/assets/svg";
 import { Colors } from "@/constants"
 import { NAVIGATION } from "@/constants/navigation"
@@ -7,7 +7,7 @@ import { Text, View } from "react-native"
 import TagInput from "./TagInput";
 import ColorInput from "./ColorInput";
 import { styles } from "@/domains/wallet/styles";
-import { ButtonWithIcon } from "@/domains/global/components/elements";
+import { ButtonWithIcon } from "@/global/components/elements";
 
 const Receive = () => {
     return (

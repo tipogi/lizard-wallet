@@ -1,4 +1,4 @@
-import { Skeleton } from "@/domains/global/components/layouts";
+import { Skeleton } from "@/global/components/layouts";
 import { BarChart, Search, TimeLock, Verified, Version } from "@/assets/svg";
 import { NAVIGATION } from "@/constants/navigation";
 import { transactionColor } from "@/data/entities/transactions";
@@ -9,7 +9,7 @@ import TxDetail from "./TxDetail";
 import TxTag from "./TxTag";
 import { EN } from "@/constants/translations";
 import { Summary } from "./Summary";
-import { ButtonWithIcon } from "@/domains/global/components/elements";
+import { ButtonWithIcon } from "@/global/components/elements";
 
 const Transaction = () => {
     const { conf, type } = useLocalSearchParams();

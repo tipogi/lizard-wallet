@@ -2,7 +2,7 @@ import { Colors } from "@/constants";
 import { EN } from "@/constants/translations";
 import { Modal, Text, TouchableOpacity, View } from "react-native";
 import { IconProps } from "@/assets/svg";
-import { modalStyle } from "@/domains/global";
+import { modalStyle } from "@/global";
 
 interface CustomModalProps {
   children: JSX.Element | JSX.Element[],

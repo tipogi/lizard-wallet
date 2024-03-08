@@ -1,4 +1,4 @@
-import { Skeleton } from '@/domains/global/components/layouts';
+import { Skeleton } from '@/global/components/layouts';
 import UtxoCard, { UtxoProps } from '@/domains/wallet/components/utxolist/UtxoCard';
 import { Colors, GrapeColors } from '@/constants';
 import { NAVIGATION } from '@navigation';

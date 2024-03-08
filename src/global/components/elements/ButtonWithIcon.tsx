@@ -1,6 +1,6 @@
 import { Clipboard, IconProps } from "@/assets/svg";
 import { Colors } from "@/constants";
-import { buttonStyle, buttonColors } from "@/domains/global";
+import { buttonStyle, buttonColors } from "@/global";
 import { Text, TouchableOpacity, View } from "react-native";
 
 interface ButtonProps {
