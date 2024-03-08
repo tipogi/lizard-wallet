@@ -1,5 +1,5 @@
 import { Color, Fingerprint, HashTag, IconProps, LockClosed, Sign } from "@/assets/svg";
-import { TAtomicAccountState } from "@/store/types/accounts";
+import { TAtomicAccountState } from "@/domains/accounts/store/types/accounts";
 
 export type TCardDetails = {
     icon: (props: IconProps) => React.JSX.Element,

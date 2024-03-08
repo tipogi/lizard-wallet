@@ -1,4 +1,4 @@
-import Receive from '@/components/wallet/receive';
+import Receive from '@/domains/wallet/components/receive';
 import { Colors } from '@/constants';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';

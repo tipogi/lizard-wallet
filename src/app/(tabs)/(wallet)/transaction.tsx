@@ -1,4 +1,4 @@
-import Transaction from '@/components/wallet/transaction';
+import Transaction from '@/domains/wallet/components/transaction';
 
 export default function WalletTransaction() {
   return <Transaction />;

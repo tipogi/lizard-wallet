@@ -2,9 +2,9 @@ import { UnknownAction, combineReducers } from 'redux';
 import { persistReducer } from 'redux-persist';
 import reduxMmkvStorage, { storage } from './persistence';
 
-import wallet from '../slices/wallets';
-import accounts from '../slices/accounts';
-import settings from '../slices/settings';
+import wallet from '../../domains/wallet/store/slices/wallets';
+import accounts from '../../domains/accounts/store/slices/accounts';
+import settings from '../../domains/settings/store/slices/settings';
 import autoMergeLevel2 from 'redux-persist/es/stateReconciler/autoMergeLevel2';
 
 const rootReducer = combineReducers({

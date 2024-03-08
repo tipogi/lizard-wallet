@@ -1,4 +1,4 @@
-import UTXOList from '@/components/wallet/utxolist';
+import UTXOList from '@/domains/wallet/components/utxolist';
 import { Colors } from '@/constants';
 import { StyleSheet,View } from 'react-native';
 

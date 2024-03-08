@@ -1,4 +1,4 @@
-import AccountComponent from '@/components/accounts/main';
+import AccountComponent from '@/domains/accounts/components/main';
 import { NAVIGATION } from '@/constants/navigation';
 import { Link } from 'expo-router';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
