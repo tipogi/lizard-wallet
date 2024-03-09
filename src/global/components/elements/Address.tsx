@@ -19,7 +19,7 @@ export const Address = ({ value: address }: IAddressProps) => {
             return (
                 <Text
                     key={`address-chunk-${index}`}
-                    style={[genericGlobalStyle(color).fontColor, globalStyle.fontFamily, globalStyle.h3]}
+                    style={[genericGlobalStyle(color).fontColor, globalStyle.fontFamilyBold, globalStyle.h4]}
                 >{chunk}</Text>
             );
         });

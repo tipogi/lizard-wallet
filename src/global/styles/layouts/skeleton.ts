@@ -29,7 +29,8 @@ export const skeletonStyle = StyleSheet.create({
     },
     headerLabel: {
         fontFamily: APP_FONT,
-        fontSize: H4
+        fontSize: H4,
+        color: Colors.White
     },
     headerActions: {
         display: "flex",

@@ -32,7 +32,7 @@ const Transaction = () => {
                             icon={Calendar}
                             iconSize={14}
                             background={background}
-                            text="date"
+                            text="timestamp"
                             value={[
                                 { data: "01/11/23 18:18", active: false },
                             ]}

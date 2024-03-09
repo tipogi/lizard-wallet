@@ -18,6 +18,7 @@ const Receive = () => {
         <View style={styles.receiveContainer}>
             <Skeleton
                 backAction={NAVIGATION.wallet}
+                headerLabel={"Receive"}
             >
                 <View style={styles.bodyContainer}>
                     <View style={styles.qr}>

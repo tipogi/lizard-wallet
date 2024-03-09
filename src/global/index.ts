@@ -1,5 +1,5 @@
 import { APP_FONT, APP_FONT_BOLD, Colors } from '@/constants';
-import { H3 } from '@/constants/font';
+import { H3, H4 } from '@/constants/font';
 import { StyleSheet } from 'react-native';
 
 // Elements related stylesheets
@@ -18,8 +18,8 @@ export const globalStyle = StyleSheet.create({
     fontFamilyBold: {
         fontFamily: APP_FONT_BOLD
     },
-    h3: {
-        fontSize: H3
+    h4: {
+        fontSize: H4
     }
 });
 
