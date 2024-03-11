@@ -16,18 +16,24 @@ export default function AccountLayout() {
     >
       <Stack.Screen
         name={INDEX}
-        options={{
-          //animation: "simple_push"
-        }}
       />
       <Stack.Screen
         name={IMPORT_ACCOUNT}
+        options={{
+          statusBarColor: Colors.Background
+        }}
       />
       <Stack.Screen
         name={EDIT_ACCOUNT}
+        options={{
+          statusBarColor: Colors.Background
+        }}
       />
       <Stack.Screen
         name={DELETE_ACCOUNT}
+        options={{
+          statusBarColor: Colors.Background
+        }}
       />
     </Stack>
   );

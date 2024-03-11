@@ -83,6 +83,7 @@ const Transaction = () => {
                 </View>
                 <View style={singleTxStyle.buttonContainer}>
                     <ButtonWithIcon
+                        width="50%"
                         tag={EN.wallet.transactions.single.view}
                         Icon={Search}
                         size={20}

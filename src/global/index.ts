@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native';
 
 // Elements related stylesheets
 export {modalStyle} from './styles/elements/modalStyles';
-export {buttonStyle, buttonColors} from './styles/elements/buttonStyles';
+export {buttonStyle, buttonColors, buttonDimensions } from './styles/elements/buttonStyles';
 export {textColors} from './styles/elements/textStyle';
 
 // Layout related stylesheets

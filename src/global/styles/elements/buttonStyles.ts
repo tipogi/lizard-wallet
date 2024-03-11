@@ -1,22 +1,33 @@
 import { APP_FONT, Colors } from "@/constants";
 import { H3, H4 } from "@/constants/font";
-import { StyleSheet } from "react-native";
+import { DimensionValue, StyleSheet } from "react-native";
 
 export const buttonStyle = StyleSheet.create({
     container: {
+        display: "flex",
+        alignItems: "center",
+    },
+    touchableContainer: {
+        width: "70%",
         backgroundColor: Colors.White,
-        //width: "70%",
         display: "flex",
         flexDirection: "row",
-        justifyContent: "center",
+        borderRadius: 10,
+        
         alignItems: "center",
-        borderRadius: 10
+        justifyContent: "center"
     },
     iconContainer: {
         padding: 10,
         borderRadius: 10,
-        //borderBottomRightRadius: 0,
-        //borderTopRightRadius: 0
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center"
+    },
+    labelContainer: {
+        display: "flex",
+        alignItems: "flex-start",
+        flex: 3
     },
     label: {
         color: Colors.Background,
@@ -33,5 +44,11 @@ export const buttonStyle = StyleSheet.create({
 export const buttonColors = (color: Colors) => StyleSheet.create({
     iconBackground: {
         backgroundColor: color
+    }
+});
+
+export const buttonDimensions = (width: DimensionValue) => StyleSheet.create({
+    width: {
+        width
     }
 })

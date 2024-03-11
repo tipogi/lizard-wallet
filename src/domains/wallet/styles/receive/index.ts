@@ -56,8 +56,6 @@ export const styles = StyleSheet.create({
         marginLeft: 15
     },
     buttonContainer: {
-        display: "flex",
-        alignItems: "center",
         marginBottom: 40
     },
 });

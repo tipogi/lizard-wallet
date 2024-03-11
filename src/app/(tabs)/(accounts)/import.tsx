@@ -1,22 +1,9 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import Import from "@/domains/accounts/components/import";
 
 const ImportAccount = () => {
-    return (
-        <View style={styles.container}>
-            {/* <StatusBar style="auto" /> */}
-            <Text>Import account Screen</Text>
-        </View>
-    )
+  return (
+    <Import />
+  )
 }
-
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      backgroundColor: '#222F3A',
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-  });
 
 export default ImportAccount;

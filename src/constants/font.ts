@@ -9,6 +9,7 @@ export const H3 = 28;
 export const H4 = 24;
 export const H4_2 = 22;
 export const H5 = 20;
+export const H5_2 = 16;
 
 // --> Karintina font config <--
 // export const APP_FONT = 'urbanist';

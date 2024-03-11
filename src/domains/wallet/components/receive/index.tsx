@@ -44,6 +44,7 @@ const Receive = () => {
                     </View>
                     <View style={styles.buttonContainer}>
                         <ButtonWithIcon
+                            width="60%"
                             tag={EN.wallet.receive.clipboard}
                             Icon={Clipboard}
                             size={20}
