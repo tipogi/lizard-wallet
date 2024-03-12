@@ -2,7 +2,7 @@ import { Middleware, configureStore } from "@reduxjs/toolkit";
 import rootReducer from "./rootReducer";
 import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE, persistStore } from "redux-persist";
 
-const __DEV__ = true;
+const __DEV__ = false;
 
 const middlewares: Middleware[] = [];
 
