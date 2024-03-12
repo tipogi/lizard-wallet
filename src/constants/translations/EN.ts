@@ -1,4 +1,6 @@
-export const EN = {
+import { TDictionary } from ".";
+
+export const EN: TDictionary = {
     wallet: {
         receive: {
             headline: "Receive",
@@ -28,7 +30,17 @@ export const EN = {
                 notConf: "unconfirmed",
                 view: "view on explorer"
             }
-        }
+        },
+    },
+    settings: {
+        elements: {
+            tor: "connect your node through TOR circuit",
+            node: "connect to personal node to not leak sensitive data",
+            pin: "request PIN before initialise wallet",
+            blockExplorer: "block explorer",
+            backup: "create a backup"
+        },
+        headline: "Settings"
     },
     generic: {
         button: {

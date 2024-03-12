@@ -1,4 +1,4 @@
-import { In, Out, TagIcon } from "@/assets/svg";
+import { In, Out, Tag } from "@/assets/svg";
 import { Colors } from "@/constants";
 import { TxType } from "@/constants/bitcoin";
 import { NAVIGATION } from "@/constants/navigation";
@@ -44,7 +44,7 @@ const Transaction = ({ tx_id, tag, balance, type, time, conf }: TransactionProps
                         </Text>
                     </View>
                     <View style={listStyle.tag}>
-                        <TagIcon fontSize={17} color={Colors.Grey} />
+                        <Tag fontSize={17} color={Colors.Grey} />
                         <Text style={listStyle.tagName}>{tag}</Text>
                     </View>
                 </View>

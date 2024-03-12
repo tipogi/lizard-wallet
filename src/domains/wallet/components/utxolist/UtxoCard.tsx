@@ -1,4 +1,4 @@
-import { Grape, TagIcon } from "@/assets/svg";
+import { Grape, Tag } from "@/assets/svg";
 import { Colors } from "@/constants";
 import { addDotsToValue } from "@/data/convertions";
 import { utxoCardStyle } from "@/domains/wallet/styles";
@@ -26,7 +26,7 @@ const UtxoCard = ({ id, address, tag, index, color, balance }: UtxoProps) => {
                 <View style={utxoCardStyle.infoContainer}>
                     <View style={utxoCardStyle.tagContainer}>
                         <View style={utxoCardStyle.tagIconContainer}>
-                            <TagIcon fontSize={17} color={Colors.White}/>
+                            <Tag fontSize={17} color={Colors.White}/>
                         </View>
                         <Text style={[utxoCardStyle.tagText, utxoCardStyle.primaryColor]}>{`${tag}`}</Text>
                     </View>

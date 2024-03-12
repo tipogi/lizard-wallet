@@ -1,4 +1,4 @@
-import { TagIcon } from "@/assets/svg";
+import { Tag } from "@/assets/svg";
 import { CustomModal } from "@/global/components/elements";
 import { Colors } from "@/constants";
 import { EN } from "@/constants/translations";
@@ -16,7 +16,7 @@ const TagInput = () => {
       <CustomModal 
         modalVisible={modalVisible} 
         toggleModal={toggleModal}
-        icon={TagIcon}
+        icon={Tag}
         headline={EN.wallet.receive.modal.tag.headline}
       >
         <View style={tagInputStyle.inputContainer}>
@@ -30,7 +30,7 @@ const TagInput = () => {
           />
         </View>
       </CustomModal>
-      <TagIcon fontSize={22} color={Colors.Green} />
+      <Tag fontSize={22} color={Colors.Green} />
       <TouchableOpacity onPress={() => toggleModal(true)}>
         <Text style={tagInputStyle.font}>{EN.wallet.receive.tag}</Text>
       </TouchableOpacity>

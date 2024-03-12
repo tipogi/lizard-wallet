@@ -6,48 +6,62 @@ export interface IconProps {
     rotate?: number
 }
 
-export { BroadcastStream } from "./BroadcastStream";
-export { ShieldCheck } from "./ShieldCheck";
-export { Utxos } from "./Utxos";
-export { LockClosed } from './LockClosed';
-export { MultipleLayers } from './MultipleLayer';
-export { Close } from './Close';
-export { ScanAddress } from './ScanAddress';
-export { Wallet } from './Wallet';
-export { TagIcon } from './Tag';
-export { Grape } from './Grape';
-export { In } from './In';
-export { Out } from './Out';
-export { Arrow } from './Arrow';
-export { Qr } from './Qr';
-export { Tick } from './Tick';
-export { Custom } from './Custom';
-export { Clock } from './Clock';
-export { BarChart } from './BarChart';
-export { Format } from './Format';
-export { HashTag } from './HashTag';
-export { TimeLock } from './TimeLock';
-export { Verified } from './Verified';
-export { Version } from './Version';
-export { Share } from './Share';
-export { Color } from './Color';
-export { Fingerprint } from './Fingerprint';
-export { Sign } from './Sign';
-export { Import } from './Import';
-export { Rubbish } from './Rubbish';
-export { Dashboard } from './Dashboard';
-export { Back } from './Back';
-export { Clipboard } from './Clipboard';
-export { Pool } from './Pool';
-export { Search } from './Search';
-export { Filter } from './Filter';
-export { Calendar } from './Calendar';
-export { Broom } from './Broom';
+// Account related Icons
+export { LockClosed } from './accounts/LockClosed';
+export { HashTag } from './accounts/HashTag';
+export { Color } from './accounts/Color';
+export { Sign } from './accounts/Sign';
+export { Import } from './accounts/Import';
+export { Rubbish } from './accounts/Rubbish';
+export { Dashboard } from './accounts/Dashboard';
+export { Broom } from './accounts/Broom';
+
+// Wallet related Icons
+export { Clipboard } from './wallet/Clipboard';
+export { Pool } from './wallet/Pool';
+export { Search } from './wallet/Search';
+export { Filter } from './wallet/Filter';
+export { Calendar } from './wallet/Calendar';
+export { TimeLock } from './wallet/TimeLock';
+export { Verified } from './wallet/Verified';
+export { Version } from './wallet/Version';
+export { Qr } from './wallet/Qr';
+export { Tick } from './wallet/Tick';
+export { Custom } from './wallet/Custom';
+export { BarChart } from './wallet/BarChart';
+export { In } from './wallet/In';
+export { Out } from './wallet/Out';
+export { Utxos } from "./wallet/Utxos";
+export { BroadcastStream } from "./wallet/BroadcastStream";
+export { Tag } from "./wallet/Tag";
+
+
+// Settings related Icons
+export { Tor } from './settings/Tor';
+export { Node } from './settings/Node';
+export { Pin } from './settings/Pin';
+export { Backup } from './settings/Backup';
+export { Block } from './settings/Block';
+
+// Not domain attached Icons
+export { Wallet } from './general/menu/Wallet';
+export { MultipleLayers } from './general/menu/MultipleLayer';
+export { ScanAddress } from './general/menu/ScanAddress';
+export { Grape } from './general/Grape';
+export { Arrow } from './general/Arrow';
+export { Back } from './general/Back';
+export { Fingerprint } from './general/Fingerprint';
+export { ShieldCheck } from "./general/ShieldCheck";
 
 // Exported using SVG format not tsx. That was done because hot corner
-export { Settings } from './Settings';
+export { Settings } from './general/menu/Settings';
 
 // Not in use
-//export { Tail } from './Tail';
-//export { Palette } from './Palette';
-//export { Drop } from './Drop';
+//export { Tail } from './deprecated/Tail';
+//export { Palette } from './deprecated/Palette';
+//export { Drop } from './deprecated/Drop';
+//export { Close } from './deprecated/Close';
+//export { Share } from './deprecated/Share';
+//export {  } from './deprecated/_Tag';
+//export { Clock } from './deprecated/Clock';
+//export { Format } from './deprecated/Format';

@@ -6,7 +6,7 @@ export const UTXO_SCREEN = "utxos"
 export const RECEIVE_SCREEN = "receive"
 export const TX_SCREEN = "transaction"
 
-export const SETTINGS_SCREEN = "settings"
+export const SETTINGS_SCREEN = "(settings)"
 
 export const ACCOUNT_SCREEN = "(accounts)"
 export const IMPORT_ACCOUNT = "import"
