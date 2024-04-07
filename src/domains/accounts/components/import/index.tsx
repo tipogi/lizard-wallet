@@ -6,6 +6,7 @@ import { Broom, Import as ImportIcon } from "@/assets/svg";
 import { ButtonWithIcon } from "@/global/components/elements";
 import { Colors } from "@/constants";
 import { Formik } from "formik";
+import { fontStyle } from "@/global";
 
 const Import = () => {
 
@@ -30,17 +31,17 @@ const Import = () => {
                                     <View style={importStyle.absoluteContainer}>
                                         <View style={importStyle.inputHeaderContainer}>
                                             <View style={importStyle.inputHeaderTextContaiener}>
-                                                <Text style={importStyle.inputHeaderText}>Name</Text>
+                                                <Text style={[ fontStyle.semibold, fontStyle.h5, importStyle.inputHeaderText ]}>Name</Text>
                                             </View>
                                             <View style={importStyle.inputHeaderTextContaiener}>
-                                                <Text style={importStyle.inputHeaderText}>{`${values.name.length}/20`}</Text>
+                                                <Text style={[ fontStyle.semibold, fontStyle.h5, importStyle.inputHeaderText ]}>{`${values.name.length}/20`}</Text>
                                             </View>
                                         </View>
                                     </View>
                                     <TextInput
                                         onChangeText={handleChange('name')}
                                         value={values.name}
-                                        style={[importStyle.nameInput, importStyle.input]}
+                                        style={[ fontStyle.semibold, fontStyle.h5, importStyle.nameInput, importStyle.input]}
                                         maxLength={20}
                                     />
                                 </View>
@@ -48,14 +49,14 @@ const Import = () => {
                                     <View style={importStyle.absoluteContainer}>
                                         <View style={importStyle.inputHeaderContainer}>
                                             <View style={importStyle.inputHeaderTextContaiener}>
-                                                <Text style={importStyle.inputHeaderText}>Descriptor</Text>
+                                                <Text style={[ fontStyle.semibold, fontStyle.h5, importStyle.inputHeaderText ]}>Descriptor</Text>
                                             </View>
                                         </View>
                                     </View>
                                     <TextInput
                                         onChangeText={handleChange('descriptor')}
                                         value={values.descriptor}
-                                        style={[importStyle.descriptorInput, importStyle.input]}
+                                        style={[ fontStyle.main, fontStyle.h5, importStyle.descriptorInput, importStyle.input]}
                                         multiline
                                     />
                                 </View>

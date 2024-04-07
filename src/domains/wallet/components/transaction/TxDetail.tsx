@@ -1,7 +1,7 @@
 import { IconProps } from "@/assets/svg";
-import { APP_FONT, Colors } from "@/constants";
-import { APP_FONT_BOLD, H4 } from "@/constants/font";
+import { Colors } from "@/constants";
 import { detailStyle, dynamicColor } from "@/domains/wallet/styles";
+import { fontStyle } from "@/global";
 import { Text, View } from "react-native";
 
 interface DetailsValue {
@@ -23,11 +23,11 @@ const TxDetail = ({ icon: Icon, iconSize, background, text, value }: TxDetailPro
         if (active) {
             return (
                 <View key={`details_${index}`} style={{ backgroundColor: background, paddingVertical: 2, paddingHorizontal: 8, borderRadius: 4}}>
-                    <Text style={{ color: Colors.White, fontFamily: APP_FONT_BOLD, fontSize: H4}}>{data}</Text>
+                    <Text style={[fontStyle.semibold, fontStyle.h5 ,{ color: Colors.White } ]}>{data}</Text>
                 </View>
             )
         }
-        return <Text key={`details_${index}`} style={{ color: Colors.Grey, fontFamily: APP_FONT, fontSize: H4}}>{data}</Text>
+        return <Text key={`details_${index}`} style={[ fontStyle.main, fontStyle.h5 ,{ color: Colors.Grey }]}>{data}</Text>
     }
 
     const renderDetailsValue = () => {
@@ -49,7 +49,7 @@ const TxDetail = ({ icon: Icon, iconSize, background, text, value }: TxDetailPro
             <View style={detailStyle.icon}>
                 <Icon fontSize={iconSize} color={background}/>
             </View>
-            <Text style={detailStyle.detailText}>{ text }</Text>
+            <Text style={[fontStyle.semibold, fontStyle.h5, detailStyle.detailText]}>{ text }</Text>
             <View style={detailStyle.detailValue}>
                 { renderDetailsValue() }
             </View>

@@ -1,4 +1,4 @@
-import { APP_FONT, Colors } from "@/constants";
+import { APP_HEADER_FONT, Colors } from "@/constants";
 import { H3, H4 } from "@/constants/font";
 import { DimensionValue, StyleSheet } from "react-native";
 
@@ -27,12 +27,10 @@ export const buttonStyle = StyleSheet.create({
     labelContainer: {
         display: "flex",
         alignItems: "flex-start",
-        flex: 3
+        flex: 5
     },
     label: {
         color: Colors.Background,
-        fontFamily: APP_FONT,
-        fontSize: H4,
         paddingHorizontal: 15
     },
     shadow: {

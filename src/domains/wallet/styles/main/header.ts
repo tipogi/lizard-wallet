@@ -1,5 +1,5 @@
-import { APP_FONT, APP_FONT_BOLD } from "@/constants";
-import { H1, H4 } from "@/constants/font";
+import { Color } from "@/assets/svg";
+import { Colors } from "@/constants";
 import { StyleSheet } from "react-native";
 
 export const headerStyle = StyleSheet.create({
@@ -16,7 +16,7 @@ export const headerStyle = StyleSheet.create({
       flexDirection:"row"
     },
     icon: {
-      padding: 15
+      padding: 10
     },
     status: {
       alignItems: 'center',
@@ -26,8 +26,6 @@ export const headerStyle = StyleSheet.create({
     },
     description: {
       paddingLeft: 10,
-      fontFamily: APP_FONT,
-      fontSize: H4
     },
     options: {
       justifyContent: "flex-end",
@@ -35,17 +33,16 @@ export const headerStyle = StyleSheet.create({
       flexDirection:"row",
       flex: 1,
       paddingRight: 15,
-      gap: 25
+      gap: 10
     },
     info: {
       flex:3,
-      paddingRight: 60,
+      paddingRight: 20,
       display: 'flex',
       alignItems: 'flex-end',
       justifyContent: "center",
     },
     balance: {
-      fontSize: H1,
-      fontFamily: APP_FONT_BOLD
+      color: Colors.Background
     }
   });

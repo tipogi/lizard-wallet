@@ -2,13 +2,13 @@ import { Middleware, configureStore } from "@reduxjs/toolkit";
 import rootReducer from "./rootReducer";
 import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE, persistStore } from "redux-persist";
 
-const __DEV__ = false;
+export const __DEV__ = false;
 
 const middlewares: Middleware[] = [];
 
 if (__DEV__) {
-    const createDebugger = require('redux-flipper').default;
-    middlewares.push(createDebugger());
+    //const createDebugger = require('redux-flipper').default;
+    //middlewares.push(createDebugger());
 }
 
 const store = configureStore({

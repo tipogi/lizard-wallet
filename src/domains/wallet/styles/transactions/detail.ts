@@ -1,5 +1,5 @@
 import { Colors } from "@/constants";
-import { APP_FONT, H4 } from "@/constants/font";
+import { APP_FONT, H5 } from "@/constants/font";
 import { StyleSheet } from "react-native";
 
 export const detailStyle = StyleSheet.create({
@@ -14,9 +14,7 @@ export const detailStyle = StyleSheet.create({
     },
     detailText: {
       flex: 8,
-      fontSize: H4,
       color: Colors.SecondaryBackground,
-      fontFamily: APP_FONT
     },
     detailValue: {
       flex: 12,
@@ -30,6 +28,6 @@ export const dynamicColor = (background: Colors, active: boolean) => StyleSheet.
     font: {
         color: active ? background : Colors.White,
         fontFamily: APP_FONT,
-        fontSize: H4
+        fontSize: H5
     }
 });

@@ -4,7 +4,7 @@ import { TxType } from "@/constants/bitcoin"
 import { EN } from "@/constants/translations"
 import { addDotsToValue } from "@/data/convertions"
 import { getTransactionIcon, renderThreshold, transactionColor } from "@/data/entities/transactions"
-import { globalStyle } from "@/global"
+import { fontStyle, iconSizes } from "@/global"
 import { genericColor, summaryStyle } from "@/domains/wallet/styles"
 import { EBitcoinUnit } from "@/utils/bitcoin/network"
 import { Text, View } from "react-native"
@@ -26,9 +26,9 @@ export const Summary = ({ type, amount, conf, hex }: SummaryProps) => {
 
     const renderAmount = () => {
         return (
-            <Text style={summaryStyle.amountNumber}>
+            <Text style={[ fontStyle.extrabold, fontStyle.h1_s, summaryStyle.amountNumber]}>
                 {`${type === TxType.OUT ? '- ' : ''}${addDotsToValue(parseInt(amount))}`}
-                <Text style={summaryStyle.amountValue}>
+                <Text style={[fontStyle.regular, fontStyle.h4, summaryStyle.amountValue]}>
                     {`  ${EBitcoinUnit.SAT}`}
                 </Text>
             </Text>
@@ -42,13 +42,13 @@ export const Summary = ({ type, amount, conf, hex }: SummaryProps) => {
                 <View style={summaryStyle.primaryContainer}>
                     { renderAmount()}
                 </View>
-                <View style={summaryStyle.primaryContainer}>
-                    <Text style={[globalStyle.fontFamilyBold, summaryStyle.confValue]}>
+                <View style={[ summaryStyle.primaryContainer, { paddingBottom: 3} ]}>
+                    <Text style={[fontStyle.semibold, fontStyle.h3_s, summaryStyle.confValue]}>
                         {conf}
-                        <Text style={[globalStyle.fontFamily, summaryStyle.confThreshold]}>
+                        <Text style={[fontStyle.regular, fontStyle.h4_s, summaryStyle.confThreshold]}>
                             {`${renderThreshold(conf)}`}
                         </Text>
-                        <Text style={[globalStyle.fontFamilyBold, summaryStyle.confLabel]}>
+                        <Text style={[fontStyle.semibold, fontStyle.h5, summaryStyle.confLabel]}>
                             {` ${EN.wallet.transactions.single.conf}`}
                         </Text>
                     </Text>
@@ -61,11 +61,11 @@ export const Summary = ({ type, amount, conf, hex }: SummaryProps) => {
                     offset={[0, 5]}
                 >
                     <View style={[summaryStyle.txIcon, genericColor(color).border]}>
-                        <Icon color={color} fontSize={30} rotate={rotation} />
+                        <Icon color={color} fontSize={iconSizes.XLARGE} rotate={rotation} />
                     </View>
                 </Shadow>
                 <View style={summaryStyle.txHexContainer}>
-                    <Text style={[globalStyle.fontFamily, summaryStyle.txHexFormat]}>{hex}</Text>
+                    <Text style={[fontStyle.semibold, fontStyle.h4_s, summaryStyle.txHexFormat]}>{hex}</Text>
                 </View>
             </View>
         </View>

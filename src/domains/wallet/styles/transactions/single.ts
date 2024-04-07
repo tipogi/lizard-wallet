@@ -1,5 +1,5 @@
-import { APP_FONT, Colors, TTxColors } from "@/constants";
-import { APP_FONT_BOLD, H1, H2, H2_5, H3, H4, H4_2, H5 } from "@/constants/font";
+import { APP_HEADER_FONT, Colors } from "@/constants";
+import { APP_HEADER_FONT_BOLD, H4 } from "@/constants/font";
 import { StyleSheet } from "react-native";
 
 export const singleTxStyle = StyleSheet.create({
@@ -9,11 +9,11 @@ export const singleTxStyle = StyleSheet.create({
     flexDirection: "column"
   },
   font: {
-    fontFamily: APP_FONT,
+    fontFamily: APP_HEADER_FONT,
     fontSize: H4
   },
   fontBold: {
-    fontFamily: APP_FONT_BOLD,
+    fontFamily: APP_HEADER_FONT_BOLD,
     fontSize: H4
   },
   secondaryColor: {
@@ -49,7 +49,7 @@ export const singleTxStyle = StyleSheet.create({
     borderRadius: 5
   },
   clipTxt: {
-    fontFamily: APP_FONT,
+    fontFamily: APP_HEADER_FONT,
     fontSize: H4,
     padding: 10
   },
@@ -61,7 +61,7 @@ export const genericColor = (color: Colors) => StyleSheet.create({
   },
   txColor: {
     color: color,
-    fontFamily: APP_FONT
+    fontFamily: APP_HEADER_FONT
   },
   border: {
     borderColor: color
@@ -86,27 +86,20 @@ export const summaryStyle = StyleSheet.create({
     alignItems: "flex-end",
   },
   amountNumber: {
-    color: Colors.White,
-    fontSize: H1,
-    fontFamily: APP_FONT_BOLD,
+    color: Colors.White
   },
   amountValue: {
     color: Colors.Grey,
-    fontFamily: APP_FONT,
-    fontSize: H4,
     marginLeft: 10,
   },
   confValue: {
     color: Colors.White,
-    fontSize: H2_5,
   },
   confThreshold: {
-    color: Colors.Grey,
-    fontSize: H4
+    color: Colors.Grey
   },
   confLabel: {
-    color: Colors.White,
-    fontSize: H5
+    color: Colors.White
   },
   txIcon: {
     borderRadius: 40,
@@ -122,7 +115,6 @@ export const summaryStyle = StyleSheet.create({
     marginTop: 10
   },
   txHexFormat: {
-    fontSize: H4_2,
     color: Colors.Grey
   }
 })

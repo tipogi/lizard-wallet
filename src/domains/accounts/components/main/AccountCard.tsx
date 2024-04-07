@@ -1,6 +1,7 @@
 import { addDotsToValue } from "@/data/convertions";
 import { TAtomicAccountState } from "@/domains/accounts/store/types/accounts";
 import { cardStyle, genericCardStyle } from "@/domains/accounts/styles";
+import { fontStyle } from "@/global";
 import { LinearGradient } from "expo-linear-gradient";
 import { Animated, Dimensions, Text, View } from "react-native";
 
@@ -26,10 +27,10 @@ const AccountCard = ({ item, ITEM_SIZE }: AccountCardProps) => {
                 style={genericCardStyle(SPACING, ITEM_HEIGHT).container}
             >
                 <Animated.View>
-                    <Text style={cardStyle.name}>
+                    <Text style={[ fontStyle.bold, fontStyle.h3_s, cardStyle.name]}>
                         {item.name}
                     </Text>
-                    <Text style={cardStyle.balance}>
+                    <Text style={[ fontStyle.main, fontStyle.h5 ]}>
                         {`${addDotsToValue(item.balance)} sat`}
                     </Text>
 

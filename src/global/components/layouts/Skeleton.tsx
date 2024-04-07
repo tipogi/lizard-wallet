@@ -2,7 +2,7 @@ import { DimensionValue, Text, TouchableOpacity, View } from "react-native";
 import { Colors } from "@/constants";
 import { Back, IconProps } from "@/assets/svg";
 import { NAVIGATION } from "@/constants/navigation";
-import { skeletonStyle } from "@/global";
+import { fontStyle, skeletonStyle } from "@/global";
 import { Link } from "expo-router";
 
 export type THeaderAction = {
@@ -36,7 +36,7 @@ export const Skeleton = ({ children, headerLabel, backAction, actionIcon }: Skel
 
     const renderHeaderLabel = () => (
         <View style={skeletonStyle.headerLabelContainer}>
-            <Text style={skeletonStyle.headerLabel}>{headerLabel}</Text>
+            <Text style={[ skeletonStyle.headerLabel, fontStyle.main, fontStyle.h4_s ]}>{headerLabel}</Text>
         </View>
     );
 

@@ -1,12 +1,12 @@
 import { Colors } from "@/constants";
-import { APP_FONT_BOLD, H2 } from "@/constants/font";
+import { APP_HEADER_FONT_BOLD, H2 } from "@/constants/font";
 import { StyleSheet } from "react-native";
 
 export const settingStyle = StyleSheet.create({
     container: {
         display: "flex",
         flex: 1,
-        backgroundColor: Colors.Green
+        backgroundColor: Colors.Green,
     },
     header: {
         display: "flex",
@@ -14,9 +14,7 @@ export const settingStyle = StyleSheet.create({
         justifyContent: "center"
     },
     headerText: {
-        fontFamily: APP_FONT_BOLD,
         color: Colors.Black,
-        fontSize: H2,
         paddingTop: 30
     },
     main: {

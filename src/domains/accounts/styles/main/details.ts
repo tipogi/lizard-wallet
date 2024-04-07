@@ -1,5 +1,4 @@
 import { Colors } from "@/constants";
-import { APP_FONT, H4 } from "@/constants/font";
 import { StyleSheet } from "react-native";
 
 export const detailStyle = StyleSheet.create({
@@ -14,9 +13,7 @@ export const detailStyle = StyleSheet.create({
     },
     detailText: {
       flex: 8,
-      fontSize: H4,
-      color: Colors.WhiteSoft,
-      fontFamily: APP_FONT
+      color: Colors.White,
     },
     detailValue: {
       flex: 12,

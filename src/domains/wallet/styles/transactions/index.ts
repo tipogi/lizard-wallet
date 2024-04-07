@@ -1,5 +1,5 @@
-import { APP_FONT, APP_FONT_BOLD, Colors, TTxColors } from "@/constants"
-import { H4, H5 } from "@/constants/font"
+import { APP_HEADER_FONT, APP_HEADER_FONT_BOLD, Colors, TTxColors } from "@/constants"
+import { APP_FONT, H5, H5_2, H_M } from "@/constants/font"
 import { StyleSheet } from "react-native"
 
 export const listStyle = StyleSheet.create({
@@ -15,33 +15,40 @@ export const listStyle = StyleSheet.create({
         paddingLeft: 20,
         gap: 10
     },
+    main: {
+        display: 'flex',
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    extra: {
+        display: "flex",
+        justifyContent: 'space-between',
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
     balance: {
-        fontSize: H4,
-        fontFamily: APP_FONT_BOLD
+        fontSize: H_M,
+        fontFamily: APP_HEADER_FONT_BOLD
 
     },
     tag: {
         display: "flex",
         flexDirection: "row",
-        alignItems: "flex-end",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: 5
     },
     tagName: {
-        color: Colors.Grey,
+        color: Colors.White,
         fontFamily: APP_FONT,
         fontSize: H5,
 
     },
-    date: {
-        display: "flex",
-        flex: 2,
-        flexDirection: "row-reverse",
-        alignItems: "flex-end"
-    },
     txDate: {
         color: Colors.WhiteSoft,
         fontFamily: APP_FONT,
-        fontSize: H5,
-        paddingRight: 10
+        fontSize: H5_2,
     }
 })
 

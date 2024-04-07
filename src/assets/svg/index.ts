@@ -34,6 +34,7 @@ export { Out } from './wallet/Out';
 export { Utxos } from "./wallet/Utxos";
 export { BroadcastStream } from "./wallet/BroadcastStream";
 export { Tag } from "./wallet/Tag";
+export { DerivationPath } from "./wallet/DerivationPath";
 
 
 // Settings related Icons

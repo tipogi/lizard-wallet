@@ -5,6 +5,7 @@ import { EN } from "@/constants/translations";
 import { tagInputStyle } from "@/domains/wallet/styles";
 import { useState } from "react";
 import { Text, TextInput, TouchableOpacity, View } from "react-native";
+import { fontStyle, iconSizes } from "@/global";
 
 const TagInput = () => {
 
@@ -21,7 +22,7 @@ const TagInput = () => {
       >
         <View style={tagInputStyle.inputContainer}>
           <TextInput
-            style={[tagInputStyle.font, tagInputStyle.input]}
+            style={[fontStyle.main, fontStyle.h5, tagInputStyle.input]}
             onChangeText={onChangeText}
             value={text}
             placeholder={EN.wallet.receive.modal.tag.placeholder}
@@ -30,9 +31,9 @@ const TagInput = () => {
           />
         </View>
       </CustomModal>
-      <Tag fontSize={22} color={Colors.Green} />
+      <Tag fontSize={iconSizes.MEDIUM} color={Colors.Grey} />
       <TouchableOpacity onPress={() => toggleModal(true)}>
-        <Text style={tagInputStyle.font}>{EN.wallet.receive.tag}</Text>
+        <Text style={[fontStyle.italic, fontStyle.h5, tagInputStyle.font]}>{EN.wallet.receive.tag}</Text>
       </TouchableOpacity>
     </View>
   );

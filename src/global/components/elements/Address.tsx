@@ -1,6 +1,7 @@
 import { Colors } from "@/constants";
 import { addressToChunks } from "@/data/convertions";
-import { genericGlobalStyle, globalStyle } from "@/global";
+
+import { genericGlobalStyle, fontStyle } from "@/global";
 import { Text } from "react-native";
 
 interface IAddressProps {
@@ -19,7 +20,7 @@ export const Address = ({ value: address }: IAddressProps) => {
             return (
                 <Text
                     key={`address-chunk-${index}`}
-                    style={[genericGlobalStyle(color).fontColor, globalStyle.fontFamilyBold, globalStyle.h4]}
+                    style={[genericGlobalStyle(color).fontColor, fontStyle.bold, fontStyle.h4]}
                 >{chunk}</Text>
             );
         });

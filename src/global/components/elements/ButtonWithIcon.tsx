@@ -1,6 +1,6 @@
 import { IconProps } from "@/assets/svg";
 import { Colors } from "@/constants";
-import { buttonStyle, buttonColors, buttonDimensions } from "@/global";
+import { buttonStyle, buttonColors, buttonDimensions, fontStyle } from "@/global";
 import { DimensionValue, Text, TouchableOpacity, View } from "react-native";
 
 interface ButtonProps {
@@ -23,7 +23,7 @@ export const ButtonWithIcon = ({ tag, Icon, size, background, width, action}: Bu
                     <Icon fontSize={size} color={Colors.Background} />
                 </View>
                 <View style={buttonStyle.labelContainer}>
-                    <Text style={buttonStyle.label}>{tag}</Text>
+                    <Text style={[buttonStyle.label, fontStyle.semibold, fontStyle.h5]}>{tag}</Text>
                 </View>
             </TouchableOpacity>
         </View>

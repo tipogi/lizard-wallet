@@ -1,5 +1,5 @@
 import { Colors } from "@/constants";
-import { APP_FONT, H4 } from "@/constants/font";
+import { APP_HEADER_FONT, H4 } from "@/constants/font";
 import { StyleSheet } from "react-native";
 
 export const skeletonStyle = StyleSheet.create({
@@ -28,8 +28,6 @@ export const skeletonStyle = StyleSheet.create({
         alignItems: "center"
     },
     headerLabel: {
-        fontFamily: APP_FONT,
-        fontSize: H4,
         color: Colors.White
     },
     headerActions: {

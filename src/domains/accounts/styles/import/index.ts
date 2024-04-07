@@ -1,5 +1,4 @@
-import { APP_FONT, Colors } from "@/constants";
-import { H4, H5, H5_2 } from "@/constants/font";
+import {  Colors } from "@/constants";
 import { StyleSheet } from "react-native";
 
 export const importStyle = StyleSheet.create({
@@ -26,7 +25,7 @@ export const importStyle = StyleSheet.create({
     },
     absoluteContainer: {
         position: "absolute",
-        top: -10, 
+        top: -8, 
         zIndex: 10,
         paddingHorizontal: 10,
         width: "100%"
@@ -42,8 +41,6 @@ export const importStyle = StyleSheet.create({
     },
     inputHeaderText: {
         color: Colors.Green,
-        fontFamily: APP_FONT,
-        fontSize: H5_2
     },
     nameInput: {
         borderColor: "#253440",
@@ -56,12 +53,10 @@ export const importStyle = StyleSheet.create({
         borderWidth: 2,
         height: 300,
         paddingHorizontal: 20,
-        paddingVertical: 10,
+        paddingVertical: 15,
         textAlignVertical: "top"
     },
     input: {
-        fontFamily: APP_FONT,
-        fontSize: H5,
-        color: Colors.WhiteSoft
+        color: Colors.White
     }
 })

@@ -6,6 +6,7 @@ import { EN } from "@/constants/translations";
 import { background, colorStyles } from "@/domains/wallet/styles";
 import { useState } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
+import { fontStyle, iconSizes } from "@/global";
 
 const ColorInput = () => {
 
@@ -36,9 +37,9 @@ const ColorInput = () => {
                     }) }
                 </View>
             </CustomModal>
-            <Grape fontSize={22} color={Colors.Green} />
+            <Grape fontSize={iconSizes.MEDIUM} color={Colors.Grey} />
             <TouchableOpacity onPress={() => toggleModal(true)}>
-                <Text style={colorStyles.font}>{EN.wallet.receive.utxoColor}</Text>
+                <Text style={[fontStyle.italic, fontStyle.h5, colorStyles.font]}>{EN.wallet.receive.utxoColor}</Text>
             </TouchableOpacity>
         </View>
     );

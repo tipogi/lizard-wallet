@@ -10,6 +10,7 @@ import TxTag from "./TxTag";
 import { EN } from "@/constants/translations";
 import { Summary } from "./Summary";
 import { ButtonWithIcon } from "@/global/components/elements";
+import { iconSizes } from "@/global";
 
 const Transaction = () => {
     const { conf, type } = useLocalSearchParams();
@@ -24,13 +25,13 @@ const Transaction = () => {
                     <Summary
                         type={type}
                         conf={conf}
-                        amount={"154884"}
+                        amount={"1548884"}
                         hex="c76844da3f2e9062266f021ca07dbec842b17dd609076b82dc9e4bde813a1c1e"
                     />
                     <View style={singleTxStyle.detailsContainer}>
                     <TxDetail
                             icon={Calendar}
-                            iconSize={14}
+                            iconSize={iconSizes.SMALL}
                             background={background}
                             text="timestamp"
                             value={[
@@ -39,7 +40,7 @@ const Transaction = () => {
                         />
                         <TxDetail
                             icon={BarChart}
-                            iconSize={20}
+                            iconSize={iconSizes.MEDIUM}
                             background={background}
                             text="fees"
                             value={[
@@ -48,7 +49,7 @@ const Transaction = () => {
                         />
                         <TxDetail
                             icon={Verified}
-                            iconSize={15}
+                            iconSize={iconSizes.SMALL}
                             background={background}
                             text="features"
                             value={[
@@ -59,7 +60,7 @@ const Transaction = () => {
                         />
                         <TxDetail
                             icon={Version}
-                            iconSize={20}
+                            iconSize={iconSizes.MEDIUM}
                             background={background}
                             text="version"
                             value={[
@@ -68,7 +69,7 @@ const Transaction = () => {
                         />
                         <TxDetail
                             icon={TimeLock}
-                            iconSize={18}
+                            iconSize={iconSizes.MEDIUM * .85}
                             background={background}
                             text="locktime"
                             value={[
@@ -76,7 +77,7 @@ const Transaction = () => {
                             ]}
                         />
                         <TxTag
-                            tag=""
+                            tag="After visit my big friends of komodo, time to buy return ticket"
                             background={background}
                         />
                     </View>

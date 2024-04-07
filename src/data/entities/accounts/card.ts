@@ -1,4 +1,4 @@
-import { Color, Fingerprint, HashTag, IconProps, LockClosed, Sign } from "@/assets/svg";
+import { Color, DerivationPath, Fingerprint, HashTag, IconProps, LockClosed, Sign } from "@/assets/svg";
 import { TAtomicAccountState } from "@/domains/accounts/store/types/accounts";
 
 export type TCardDetails = {
@@ -11,7 +11,7 @@ export const cardDetailsContent: TCardDetails[] = [
         icon: HashTag,
         key: "name",
     },{
-        icon: Sign,
+        icon: DerivationPath,
         key: "descriptor",
     },{
         icon: Fingerprint,

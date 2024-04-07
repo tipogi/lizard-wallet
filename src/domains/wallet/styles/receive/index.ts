@@ -1,5 +1,4 @@
 import { Colors } from "@/constants";
-import { APP_FONT, H3, H5 } from "@/constants/font";
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
@@ -24,35 +23,30 @@ export const styles = StyleSheet.create({
     qr: {
         display: "flex",
         flex: 1,
-        //marginBottom: 40,
         justifyContent: "center",
         alignItems: "center"
     },
     addressContainer: {
         display: 'flex',
-        flexDirection: "row"
-    },
-    derivationColor: {
-        fontFamily: APP_FONT,
-        color: Colors.AlmostWhite,
-        marginTop: 10,
-        fontSize: H5,
-        textAlign: "center"
+        flexDirection: "row",
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        rowGap: 6
     },
     detailsContainer: {
         display: "flex",
         flex: 1,
         paddingHorizontal: 30,
-        gap: 20
+        gap: 20,
+        marginTop: 50
     },
     property: {
         display: "flex",
-        flexDirection: "row"
+        flexDirection: "row",
+        alignItems:"center"
     },
     font: {
-        fontFamily: APP_FONT,
-        fontSize: H5,
-        color: Colors.Grey,
+        color: Colors.White,
         marginLeft: 15
     },
     buttonContainer: {

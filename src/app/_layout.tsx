@@ -22,18 +22,14 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
 
   const [loaded, error] = useFonts({
-    "karantina-light": require('@/assets/fonts/Karantina/Karantina-Light.ttf'),
-    "karantina-regular": require('@/assets/fonts/Karantina/Karantina-Regular.ttf'),
-    //"karantina-bold": require('../../assets/fonts/Karantina/Karantina-Bold.ttf'),
-    //oxanium: require('../../assets/fonts/oxanium.ttf'),
-    coda: require('@/assets/fonts/Coda-Regular.ttf'),
-    saira: require('@/assets/fonts/Saira_Condensed/SairaCondensed-Light.ttf'),
-    "saira-bold": require('@/assets/fonts/Saira_Condensed/SairaCondensed-SemiBold.ttf'),
-    "share-techno-regular": require('@/assets/fonts/ShareTechMono-Regular.ttf'),
-    urbanist: require('@/assets/fonts/Urbanist/Urbanist-Regular.ttf'),
-    'urbanist-bold':require('@/assets/fonts/Urbanist/Urbanist-SemiBold.ttf'),
-    //SpaceMono: require('../../assets/fonts/SpaceMono-Regular.ttf'),
-    //...FontAwesome.font,
+    "karantina": require('@/assets/fonts/karantina/light.ttf'),
+    "karantina-bold": require('@/assets/fonts/karantina/regular.ttf'),
+    "montserrat-regular": require('@/assets/fonts/montserrat/regular.ttf'),
+    "montserrat": require('@/assets/fonts/montserrat/medium.ttf'),
+    "montserratItalic": require('@/assets/fonts/montserrat/mediumItalic.ttf'),
+    "montserrat-semibold": require('@/assets/fonts/montserrat/semibold.ttf'),
+    "montserrat-bold": require('@/assets/fonts/montserrat/bold.ttf'),
+    "montserrat-extra-bold": require('@/assets/fonts/montserrat/extrabold.ttf')
   });
 
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.

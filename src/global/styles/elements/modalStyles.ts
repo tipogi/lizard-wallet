@@ -1,11 +1,11 @@
-import { APP_FONT_BOLD, Colors } from "@/constants";
+import { APP_HEADER_FONT_BOLD, Colors } from "@/constants";
 import { H5 } from "@/constants/font";
 import { StyleSheet } from "react-native";
 
 export const modalStyle = StyleSheet.create({
     font: {
         color: Colors.WhiteSoft,
-        fontFamily: APP_FONT_BOLD,
+        fontFamily: APP_HEADER_FONT_BOLD,
         fontSize: H5
     },
     centeredView: {

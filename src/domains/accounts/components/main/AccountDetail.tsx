@@ -1,6 +1,7 @@
 import { IconProps } from "@/assets/svg";
 import { Colors } from "@/constants";
 import { detailStyle } from "@/domains/accounts/styles";
+import { fontStyle, iconSizes } from "@/global";
 import { Text, View } from "react-native";
 
 interface TxDetailProps {
@@ -8,7 +9,7 @@ interface TxDetailProps {
     text: any
 }
 
-const ICON_SIZE = 24;
+const ICON_SIZE = iconSizes.MEDIUM;
 
 const AccountDetail = ({ icon: Icon, text }: TxDetailProps) => {
 
@@ -17,7 +18,7 @@ const AccountDetail = ({ icon: Icon, text }: TxDetailProps) => {
             <View style={detailStyle.icon}>
                 <Icon fontSize={ICON_SIZE} color={Colors.Green}/>
             </View>
-            <Text style={detailStyle.detailText}>{ text }</Text>
+            <Text style={[ fontStyle.main, fontStyle.h5, detailStyle.detailText ]}>{ text }</Text>
         </View>
     )
 }

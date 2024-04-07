@@ -1,9 +1,9 @@
 import { Skeleton } from '@/global/components/layouts';
 import UtxoCard, { UtxoProps } from '@/domains/wallet/components/utxolist/UtxoCard';
-import { Colors, GrapeColors } from '@/constants';
+import { GrapeColors } from '@/constants';
 import { NAVIGATION } from '@navigation';
 import { EN } from '@translations';
-import { FlatList, StyleSheet, View } from 'react-native';
+import { FlatList, View } from 'react-native';
 import { listStyles, singleTxStyle } from '@/domains/wallet/styles';
 import { Filter } from '@/assets/svg';
 

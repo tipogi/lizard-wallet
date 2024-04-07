@@ -4,6 +4,7 @@ import { Link } from 'expo-router';
 import { NAVIGATION } from '@/constants/navigation';
 import { Colors } from '@/constants';
 import { headerStyle } from '@/domains/accounts/styles';
+import { iconSizes } from '@/global';
 
 const AccountsHeader = () => {
   return (
@@ -12,19 +13,19 @@ const AccountsHeader = () => {
         <View style={headerStyle.status}>
           <Link href={NAVIGATION.import} asChild style={headerStyle.icon}>
             <TouchableOpacity>
-              <Import fontSize={18} color={Colors.Background} />
+              <Import fontSize={iconSizes.SMALL * 1.2} color={Colors.Background} />
             </TouchableOpacity>
           </Link>
         </View>
         <View style={headerStyle.options}>
-        <Link href={NAVIGATION.edit} asChild style={headerStyle.icon}>
+          <Link href={NAVIGATION.edit} asChild style={headerStyle.icon}>
             <TouchableOpacity>
-              <Dashboard fontSize={18} color={Colors.Background} />
+              <Dashboard fontSize={iconSizes.SMALL * 1.2} color={Colors.Background} />
             </TouchableOpacity>
           </Link>
           <Link href={NAVIGATION.delete} asChild style={headerStyle.icon}>
             <TouchableOpacity>
-              <Rubbish fontSize={18} color={Colors.Background} />
+              <Rubbish fontSize={iconSizes.SMALL * 1.2} color={Colors.Background} />
             </TouchableOpacity>
           </Link>
         </View>

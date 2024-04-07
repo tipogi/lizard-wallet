@@ -1,4 +1,4 @@
-import { APP_FONT, APP_FONT_BOLD, Colors } from "@/constants";
+import { APP_HEADER_FONT, APP_HEADER_FONT_BOLD, Colors } from "@/constants";
 import { H4, H5 } from "@/constants/font";
 import { StyleSheet } from "react-native";
 
@@ -25,9 +25,7 @@ export const utxoCardStyle = StyleSheet.create({
         alignItems: 'flex-start',
     },
     address: {
-        fontSize: H4,
         color: Colors.White,
-        fontFamily: APP_FONT,
     },
     infoContainer: {
         flexDirection: 'row',
@@ -41,10 +39,6 @@ export const utxoCardStyle = StyleSheet.create({
         alignItems:'center',
         justifyContent: 'center'
     },
-    tagText: {
-        fontFamily: APP_FONT,
-        fontSize: H5
-    },
     tagIconContainer: {
         marginRight: 5
     },
@@ -57,8 +51,6 @@ export const utxoCardStyle = StyleSheet.create({
     },
     balance: {
         color: Colors.Green,
-        fontFamily: APP_FONT_BOLD,
-        fontSize: H4
     },
     primaryColor: {
         color: Colors.Grey,

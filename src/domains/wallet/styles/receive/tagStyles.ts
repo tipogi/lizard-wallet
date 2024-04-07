@@ -1,5 +1,4 @@
-import { APP_FONT, Colors } from "@/constants";
-import { H5 } from "@/constants/font";
+import { Colors } from "@/constants";
 import { StyleSheet } from "react-native";
 
 export const tagInputStyle = StyleSheet.create({
@@ -8,8 +7,6 @@ export const tagInputStyle = StyleSheet.create({
         flexDirection: "row"
     },
     font: {
-        fontFamily: APP_FONT,
-        fontSize: H5,
         color: Colors.Grey,
         marginLeft: 15
     },

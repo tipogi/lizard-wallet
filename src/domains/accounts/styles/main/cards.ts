@@ -1,5 +1,4 @@
-import { APP_FONT, Colors } from "@/constants";
-import { APP_FONT_BOLD, H2, H2_5, H3, H4 } from "@/constants/font";
+import { Colors } from "@/constants";
 import { Animated, StyleSheet } from "react-native";
 
 export const cardListStyle = StyleSheet.create({
@@ -22,13 +21,7 @@ export const cardStyle = StyleSheet.create({
         justifyContent: "center"
     },
     name: {
-        fontFamily: APP_FONT_BOLD,
-        fontSize: H2_5,
         color: Colors.Background
-    },
-    balance: {
-        fontFamily: APP_FONT,
-        fontSize: H4
     },
 })
 

@@ -5,6 +5,7 @@ import { NAVIGATION } from "@/constants/navigation";
 import { addDotsToValue } from "@/data/convertions";
 import { transactionColor } from "@/data/entities/transactions";
 import { listStyle, txTypeStyle } from "@/domains/wallet/styles";
+import { iconSizes } from "@/global";
 import { Link } from "expo-router";
 import { Text, TouchableOpacity, View } from "react-native"
 
@@ -23,8 +24,8 @@ const Transaction = ({ tx_id, tag, balance, type, time, conf }: TransactionProps
 
     const renderTxTypeIcon = (type: TxType) => {
         return type === TxType.OUT ?
-            <Out fontSize={17} color={Colors.Grey} /> :
-            <In fontSize={17} color={Colors.Grey} />
+            <Out fontSize={iconSizes.SMALL} color={Colors.Grey} /> :
+            <In fontSize={iconSizes.SMALL} color={Colors.Grey} />
     }
 
     return (
@@ -38,19 +39,19 @@ const Transaction = ({ tx_id, tag, balance, type, time, conf }: TransactionProps
         >
             <TouchableOpacity>
                 <View style={[listStyle.content, txTypeStyle(color).border]}>
-                    <View>
+                    <View style={listStyle.main}>
                         <Text style={[listStyle.balance, txTypeStyle(color).balance]}>
                             {`${type === TxType.OUT ? '- ' : ''}${addDotsToValue(balance)} sat`}
                         </Text>
+                        <Text style={listStyle.txDate}>{time}</Text>
                     </View>
-                    <View style={listStyle.tag}>
-                        <Tag fontSize={17} color={Colors.Grey} />
-                        <Text style={listStyle.tagName}>{tag}</Text>
+                    <View style={listStyle.extra}>
+                        <View style={listStyle.tag}>
+                            <Tag fontSize={iconSizes.SMALL * .9} color={Colors.Grey} />
+                            <Text style={listStyle.tagName}>{tag}</Text>
+                        </View>
+                        {renderTxTypeIcon(type)}
                     </View>
-                </View>
-                <View style={listStyle.date}>
-                    {renderTxTypeIcon(type)}
-                    <Text style={listStyle.txDate}>{time}</Text>
                 </View>
             </TouchableOpacity>
         </Link>

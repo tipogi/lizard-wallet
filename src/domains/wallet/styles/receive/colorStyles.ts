@@ -1,11 +1,9 @@
-import { APP_FONT, Colors, GrapeColors } from "@/constants";
+import { APP_HEADER_FONT, Colors, GrapeColors } from "@/constants";
 import { H5 } from "@/constants/font";
 import { StyleSheet } from "react-native";
 
 export const colorStyles = StyleSheet.create({
     font: {
-        fontFamily: APP_FONT,
-        fontSize: H5,
         color: Colors.Grey,
         marginLeft: 15
     },

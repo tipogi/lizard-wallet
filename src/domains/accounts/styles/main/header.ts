@@ -16,7 +16,7 @@ export const headerStyle = StyleSheet.create({
       paddingTop: 15
     },
     icon: {
-      padding: 15
+      padding: 10
     },
     status: {
       alignItems: 'center',
@@ -30,6 +30,6 @@ export const headerStyle = StyleSheet.create({
       flexDirection:"row",
       flex: 1,
       paddingRight: 15,
-      gap: 25
+      gap: 15
     }
   });

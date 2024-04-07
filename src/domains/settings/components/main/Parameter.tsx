@@ -2,6 +2,7 @@ import { IconProps } from "@/assets/svg"
 import { Colors } from "@/constants"
 import { Text, TouchableOpacity, View } from "react-native"
 import { parameterStyle } from "../../styles"
+import { fontStyle } from "@/global"
 
 interface ParameterProps {
     icon: React.ElementType<IconProps>,
@@ -20,7 +21,11 @@ const Parameter = ({ icon: Icon, fontSize, color, text }: ParameterProps) => {
                 />
             </View>
             <View style={parameterStyle.textContainer}>
-                <Text style={[parameterStyle.text, color === Colors.Green ? parameterStyle.white : parameterStyle.grey ]}>{text}</Text>
+                <Text style={[ 
+                    fontStyle.main, 
+                    fontStyle.h5,
+                    color === Colors.Green ? parameterStyle.white : parameterStyle.grey 
+                ]}>{text}</Text>
             </View>
         </TouchableOpacity>
     )
