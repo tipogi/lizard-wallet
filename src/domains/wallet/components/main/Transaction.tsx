@@ -5,7 +5,7 @@ import { NAVIGATION } from "@/constants/navigation";
 import { addDotsToValue } from "@/data/convertions";
 import { transactionColor } from "@/data/entities/transactions";
 import { listStyle, txTypeStyle } from "@/domains/wallet/styles";
-import { iconSizes } from "@/global";
+import { fontStyle, iconSizes } from "@/global";
 import { Link } from "expo-router";
 import { Text, TouchableOpacity, View } from "react-native"
 
@@ -40,15 +40,15 @@ const Transaction = ({ tx_id, tag, balance, type, time, conf }: TransactionProps
             <TouchableOpacity>
                 <View style={[listStyle.content, txTypeStyle(color).border]}>
                     <View style={listStyle.main}>
-                        <Text style={[listStyle.balance, txTypeStyle(color).balance]}>
+                        <Text style={[fontStyle.bold, fontStyle.h4, txTypeStyle(color).balance]}>
                             {`${type === TxType.OUT ? '- ' : ''}${addDotsToValue(balance)} sat`}
                         </Text>
-                        <Text style={listStyle.txDate}>{time}</Text>
+                        <Text style={[fontStyle.main, fontStyle.h5_s, listStyle.txDate]}>{time}</Text>
                     </View>
                     <View style={listStyle.extra}>
                         <View style={listStyle.tag}>
                             <Tag fontSize={iconSizes.SMALL * .9} color={Colors.Grey} />
-                            <Text style={listStyle.tagName}>{tag}</Text>
+                            <Text style={[fontStyle.main, fontStyle.h5_s, listStyle.tagName]}>{tag}</Text>
                         </View>
                         {renderTxTypeIcon(type)}
                     </View>

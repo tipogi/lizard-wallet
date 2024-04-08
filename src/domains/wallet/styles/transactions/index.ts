@@ -1,5 +1,4 @@
-import { APP_HEADER_FONT, APP_HEADER_FONT_BOLD, Colors, TTxColors } from "@/constants"
-import { APP_FONT, H5, H5_2, H_M } from "@/constants/font"
+import { Colors, TTxColors } from "@/constants"
 import { StyleSheet } from "react-native"
 
 export const listStyle = StyleSheet.create({
@@ -27,11 +26,6 @@ export const listStyle = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center'
     },
-    balance: {
-        fontSize: H_M,
-        fontFamily: APP_HEADER_FONT_BOLD
-
-    },
     tag: {
         display: "flex",
         flexDirection: "row",
@@ -40,15 +34,10 @@ export const listStyle = StyleSheet.create({
         gap: 5
     },
     tagName: {
-        color: Colors.White,
-        fontFamily: APP_FONT,
-        fontSize: H5,
-
+        color: Colors.White
     },
     txDate: {
-        color: Colors.WhiteSoft,
-        fontFamily: APP_FONT,
-        fontSize: H5_2,
+        color: Colors.WhiteSoft
     }
 })
 
